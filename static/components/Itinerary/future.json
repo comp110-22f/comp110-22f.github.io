@@ -1,52 +1,36 @@
 {
-    "2021-11-29": [],
-    "2021-11-30": [
+    "2022-07-20": [
         {
-            "kind": "CL",
-            "n": 27,
-            "title": "LDOC - No Gradescope Submission",
-            "date": "2021-11-30",
-            "deadline": "None",
+            "kind": "LS",
+            "n": 25,
+            "title": "NumPy and Pandas",
+            "date": "2022-07-20",
+            "deadline": "2022-07-20",
             "links": {
-                "Section 001 - Async": "/lessons/cl27-ldoc.html",
-                "Section 002 - In-person": "https://youtu.be/zcmx1LQ5pks",
-                "Slides": "/static/slides/cl27-ldoc.pdf"
-            }
-        },
-        {
-            "kind": "RV",
-            "n": 11,
-            "title": "Review 4pm -- Going Over the Last Quiz",
-            "date": "2021-11-30",
-            "deadline": "None",
-            "links": {
-                "Zoom Recording": "https://uncch.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=76101f22-b0dd-47dd-b6ec-adf00173db0c"
+                "Lesson posted to Gradescope": ""
             }
         }
     ],
-    "2021-12-01": [],
-    "2021-12-03": [
+    "2022-07-21": [
+        {
+            "kind": "CL",
+            "n": 22,
+            "title": "LDOC!",
+            "date": "2022-07-21",
+            "deadline": "None",
+            "links": {
+                "Watch Video": "https://youtu.be/h7IlAesHW-M"
+            }
+        }
+    ],
+    "2022-07-25": [
         {
             "kind": "FN",
             "n": 0,
-            "title": "Final @ 08:00:00",
-            "date": "2021-12-03",
+            "title": "Final @ 8:00am",
+            "date": "2022-07-25",
             "deadline": "None",
-            "links": {
-                "Finals Information / F.A.Q.": "/resources/final.html"
-            }
-        }
-    ],
-    "2021-12-02": [
-        {
-            "kind": "RV",
-            "n": 12,
-            "title": "Review 3pm -- SN014 Final Review",
-            "date": "2021-12-02",
-            "deadline": "None",
-            "links": {
-                "Zoom Recording": "https://uncch.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fef6e054-109b-4268-921f-adf2016a2cf6"
-            }
+            "links": {}
         }
     ]
 }
