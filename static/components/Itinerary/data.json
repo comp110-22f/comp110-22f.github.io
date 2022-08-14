@@ -98,6 +98,26 @@
     "2022-08-22": [],
     "2022-08-23": [
         {
+            "kind": "CQ",
+            "n": 0,
+            "title": "Challenge Question: Numerical Expressions",
+            "date": "2022-08-23",
+            "deadline": "2022-08-23",
+            "links": {
+                "Watch Lesson": "https://youtu.be/ISP-9wkrlyM"
+            }
+        },
+        {
+            "kind": "CQ",
+            "n": 1,
+            "title": "Evaluating Relational Expressions",
+            "date": "2022-08-23",
+            "deadline": "2022-08-23",
+            "links": {
+                "Watch Lesson": "https://youtu.be/g8_OERDtJ8c"
+            }
+        },
+        {
             "kind": "LS",
             "n": 6,
             "title": "Variables and User Input",
@@ -108,18 +128,19 @@
             }
         },
         {
-            "kind": "LS",
-            "n": 7,
+            "kind": "CQ",
+            "n": 2,
             "title": "Environment Diagrams",
             "date": "2022-08-23",
             "deadline": "2022-08-23",
             "links": {
+                "Read instructions": "/lessons/cl02-variables.html",
                 "Watch Lesson": "https://youtu.be/Vfmuwx3vYKg"
             }
         },
         {
             "kind": "LS",
-            "n": 8,
+            "n": 7,
             "title": "Conditional if-else Statements",
             "date": "2022-08-23",
             "deadline": "2022-08-23",
