@@ -154,15 +154,17 @@ code{
 
 .plan ul {
   margin-bottom: 0;
+  margin-left: 3.5em;
 }
 
-.date, .title, .title>a {
+.date {
   font-weight: bold;
 }
 
 .kind {
-  width: 3em;
+  width: 3.5em;
   display: inline-block;
+  color: #888;
 }
 
 .async{

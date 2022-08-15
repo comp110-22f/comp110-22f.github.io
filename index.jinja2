@@ -64,8 +64,8 @@ template: home
     {%- for date in future -%}
         {%- if future[date]|length > 0 -%}
             <div data-type="lecture" data-date="{{ date }}" class="row itinerary-row py-2">
-                <div class="date col-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
-                <div class="plans col-9">
+                <div class="date col-md-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
+                <div class="plans col-md-9">
                     {%- for plan in syllabus[date] -%}
                         <div class="plan {{ plan.kind.value }}">
                             <span class="kind">{{ plan.kind.name }}{{ "%02d"|format(plan.n) }}</span>
@@ -101,8 +101,8 @@ template: home
     {%- for date in past|reverse -%}
         {%- if past[date]|length > 0 -%}
             <div data-type="lecture" data-date="{{ date }}" class="row itinerary-row py-2">
-                <div class="date col-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
-                <div class="plans col-9">
+                <div class="date col-md-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
+                <div class="plans col-md-9">
                     {%- for plan in syllabus[date] -%}
                         <div class="plan {{ plan.kind.value }}">
                             <span class="kind">{{ plan.kind.name }}{{ "%02d"|format(plan.n) }}</span>
