@@ -2,17 +2,6 @@
     "2022-08-15": [],
     "2022-08-16": [
         {
-            "kind": "CL",
-            "n": 0,
-            "title": "Welcome to COMP110",
-            "date": "2022-08-16",
-            "deadline": "None",
-            "links": {
-                "Stream": "",
-                "Slides": "/static/slides/ls00-welcome.pdf"
-            }
-        },
-        {
             "kind": "LS",
             "n": 0,
             "title": "Syllabus and Support (Due Wednesday 8/17)",
