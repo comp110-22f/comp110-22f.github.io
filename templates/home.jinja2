@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{title}} - COMP110 - 22F</title>
+    <link rel="icon" type="image/png" href="/static/tabbrand.png" />
+    {# <link rel="stylesheet" href="/static/bootstrap.min.css"> #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  {# <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css"> #}
+    <link rel="stylesheet" href="/static/styles.css?v={{time_stamp}}">
+    
+    {# <script src="/static/scripts/scroll-handler.js"></script>
+    <script src="/static/scripts/sunset_sunrise.js"></script> #}
+
+</head>
+<body>
+
+ <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
+        <div class="container">
+          <a href="/" class="navbar-brand">COMP 110</a>
+  
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+           {# WILL ADD BACK WHEN PAST SECTION IS BACK #}
+              {# <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            agenda
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#latest">this week</a></li>
+            <li><a class="dropdown-item" href="#past">the past</a></li>
+          </ul>
+        </li> #}
+            <li class="nav-item">
+              <a class="nav-link " href="/">agenda</a>
+            </li>
+              <li class="nav-item">
+                <a href="/resources" class="nav-link">resources</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/support" class="nav-link">support</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://course.care/courses" class="nav-link">course.care</a>
+              </li>  
+              {# TODO #}
+              {# <li class="nav-item">
+                <a href="/resources/team.html" class="nav-link">team</a>
+              </li> #}
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    {# INTRO SECTION #}
+     <section class="bg-dark text-light p-5 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div >
+                    <h1><span class="primary-blue">COMP110:</span> <span class="text-white">Intro to Programming and Data Science</span></h1>
+
+                    <p class="lead my-4 pb-2">Introduces students to programming and data science from a computational perspective. With an emphasis on modern applications in society, students gain experience with problem decomposition, algorithms for data analysis, abstraction design, and ethics in computing. </p>
+                    <a href="#latest" class="latest-btn">The Lastest In COMP110</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    {# BODY OF HOMEPAGE: Found at index.md #}
+    {% block content %}
+      <div class="container">
+        <div class="content">{{body}}</div>
+      </div>
+    {% endblock %}
+
+       
+  </div>
+  {# PAGE FOOTER #}
+  <div class='link-page mt-3 container'>
+    <footer>
+        <h6 class="text-center align-middle footer-text">&copy; 2022 <a href="https://krisjordan.com">Kris Jordan</a>
+          - <a href="https://docs.google.com/forms/d/e/1FAIpQLScQMteEvnQpBfGsAYP5TpuqokQenhZUIf8CNvfAUUZEjMCWZQ/viewform?usp=sf_link">Feedback Form</a>
+          - <a href="https://forms.gle/AjcyFHirwegBKXbq9">Grievances Form</a> - Made with 💛 in <a href="https://cs.unc.edu/">Chapel Hill</a></h6>
+      </footer>
+  </div>
+  {# SCRIPS FOR BOOTSTRAP #}
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script> 
+
+
+  {# Popper.js and Tippy.js #}
+
+  <!-- Development -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+  <!-- Production -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <!-- Load Tippy.js Script-->
+   <script type="text/babel" src="/static/scripts/tippy.js"></script>
+    
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</body>
+
+</html>

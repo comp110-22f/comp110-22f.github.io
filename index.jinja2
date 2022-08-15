@@ -10,85 +10,126 @@ author:
 - Ezri White
 - Claire Helms
 page: home
-template: generic
-navbar: fixed
+template: home
 ---
 
 
-<div class="link-page">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{title}} - COMP110 - 22F</title>
+    <link rel="icon" type="image/png" href="/static/tabbrand.png" />
+    {# BOOTSTRAP CDN #}
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/static/styles.css?v={{time_stamp}}">
+</head>
+<body>
+<div class="link-page pt-4">
+{# Two Main Columns #}
 <div class="row">
 
-<div id="none" class="col order-2 order-lg-1 itinerary-col itinerary">
-<div>
-<div class="row headRow"><div class="col-6 itinerary-110-col"><h2 class="display-6 itinerary-heading flipthis-highlight">Comp110 Itinerary</h2></div>
-<!--<div class="col search-col"><input class="search" type="text" placeholder="Search..." /></div>-->
-<!--<div class="col"><button id="filter-button" class="btn">Filter<img class="filter-icon" src="/static/components/Itinerary/arrow-down.png"></button></div>--></div><div>
-
-
-{%- for date in future -%}
-    {%- if future[date]|length > 0 -%}
-        <div data-type="lecture" data-date="{{ date }}" class="row itinerary-row py-2">
-            <div class="date col-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
-            <div class="plans col-10">
-                {%- for plan in syllabus[date] -%}
-                    <div class="plan {{ plan.kind.value }}">
-                    <span class="kind">{{ plan.kind.name }}{{ "%02d"|format(plan.n) }}</span> - 
-                    <span class="title">{{ plan.title }}</span>
-                    {%- if plan.links|length > 0 -%}
-                        <ul class="links">
-                        {%- for link in plan.links -%}
-                            {% if plan.links[link] != "" %}
-                            <li class="link"><a href="{{ plan.links[link] }}">{{ link }}</a></li>
-                            {% else %}
-                            <li class="link">{{ link }}</li>
-                            {% endif %}
-                        {%- endfor -%}
-                        </ul>
-                    {%- endif -%}
-                    </div>
+<!-- Horizon Box/Column -->
+<div class="col-lg-4 col-md-12 col-md-1 order-lg-3 pt-5"> 
+    <div class="box">
+        <h3 class="header text-center pt-2">On The Horizon</h3>
+        {%- if horizoninfo|length > 0 -%}
+            <ul class="list-unstyled d-flex  px-sm-5 px-md-5 px-lg-0 flex-wrap justify-content-center justify-content-md-between justify-content-lg-center align-items-center">
+                {%- for plan in horizoninfo -%}
+                    <li class="horizon-item">
+                        {%- if plan.links != {} -%}
+                            {%- for link in plan.links -%}
+                                <a href="{{ plan.links[link] }}">{{ plan.descriptor }}</a>
+                            {%- endfor -%}
+                        {%- endif -%}
+                        {%- if plan.links == {} -%}
+                            <span>{{ plan.descriptor }}</span>
+                        {%- endif -%}
+                    </li>
                 {%- endfor -%}
+            </ul>
+        {%- endif -%}
+    </div>
+</div>
+
+
+<!-- Agenda Box/Column -->
+<div class="col-lg-8 col-md-12 order-sm-2 order-lg-1 itinerary-col itinerary">
+    <div>
+    <!-- Allows us to smooth scroll to This Week and Coming Up section -->
+    <div id="latest" class="pb-3"></div>
+    <br>
+    <!-- Current Week and Future -->
+    <h3 class="header pt-3">This Week and Coming Up</h3></div>
+    {%- for date in future -%}
+        {%- if future[date]|length > 0 -%}
+            <div data-type="lecture" data-date="{{ date }}" class="row itinerary-row py-2">
+                <div class="date col-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
+                <div class="plans col-9">
+                    {%- for plan in syllabus[date] -%}
+                        <div class="plan {{ plan.kind.value }}">
+                        <span class="kind">{{ plan.kind.name }}{{ "%02d"|format(plan.n) }}</span> - 
+                        <span class="title">{{ plan.title }}</span>
+                        {%- if plan.links|length > 0 -%}
+                            <ul class="links">
+                            {%- for link in plan.links -%}
+                                {% if plan.links[link] != "" %}
+                                <li class="link"><a href="{{ plan.links[link] }}">{{ link }}</a></li>
+                                {% else %}
+                                <li class="link">{{ link }}</li>
+                                {% endif %}
+                            {%- endfor -%}
+                            </ul>
+                        {%- endif -%}
+                        </div>
+                    {%- endfor -%}
+                </div>
             </div>
-        </div>
-    {%- endif -%}
-{%- endfor -%}
-</div>
+        {%- endif -%}
+    {%- endfor -%}
+    
 
-
-<div class="row"><div class="col-10"><h2 class="display-5 itinerary-heading">The Past</h2></div></div>
-
-<div>
-{%- for date in past|reverse -%}
-    {%- if past[date]|length > 0 -%}
-        <div data-type="lecture" data-date="{{ date }}" class="row itinerary-row py-2">
-            <div class="date col-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
-            <div class="plans col-10">
-                {%- for plan in syllabus[date] -%}
-                    <div class="plan {{ plan.kind.value }}">
-                    <span class="kind">{{ plan.kind.name }}{{ "%02d"|format(plan.n) }}</span> - 
-                    <span class="title">{{ plan.title }}</span>
-                    {%- if plan.links|length > 0 -%}
-                        <ul class="links">
-                        {%- for link in plan.links -%}
-                            {% if plan.links[link] != "" %}
-                            <li class="link"><a href="{{ plan.links[link] }}">{{ link }}</a></li>
-                            {% else %}
-                            <li class="link">{{ link }}</li>
-                            {% endif %}
-                        {%- endfor -%}
-                        </ul>
-                    {%- endif -%}
-                    </div>
-                {%- endfor -%}
+<!-- The Past section -->
+{%- if past|length %}
+    <div id='past' class="pb-2"></div>
+    <hr>
+    <h3 class="header pt-3">The Past</h3>
+    {%- for date in past|reverse -%}
+        {%- if past[date]|length > 0 -%}
+            <div data-type="lecture" data-date="{{ date }}" class="row itinerary-row py-2">
+                <div class="date col-2">{{ date.strftime('%a, %b %d').replace(" 0", " ") }}</div>
+                <div class="plans col-9">
+                    {%- for plan in syllabus[date] -%}
+                        <div class="plan {{ plan.kind.value }}">
+                        <span class="kind">{{ plan.kind.name }}{{ "%02d"|format(plan.n) }}</span> - 
+                        <span class="title">{{ plan.title }}</span>
+                        {%- if plan.links|length > 0 -%}
+                            <ul class="links">
+                            {%- for link in plan.links -%}
+                                {% if plan.links[link] != "" %}
+                                <li class="link"><a href="{{ plan.links[link] }}">{{ link }}</a></li>
+                                {% else %}
+                                <li class="link">{{ link }}</li>
+                                {% endif %}
+                            {%- endfor -%}
+                            </ul>
+                        {%- endif -%}
+                        </div>
+                    {%- endfor -%}
+                </div>
             </div>
-        </div>
-    {%- endif -%}
+        {%- endif -%}
 {%- endfor -%}
+{% else %}
+{# Past Is Empty, so doesn't show up #}
+{%- endif -%}
+</div>
 </div>
 
 
-</div>
-</div>
-<div class="col col-lg-4 order-1 order-lg-2">
+
+{# <div class="col col-lg-4 order-1 order-lg-2">
 <div class="center-text quote hide-mobile">
 
 #### _“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”_ 
@@ -99,27 +140,9 @@ navbar: fixed
 <div class="center-text">
 <h2 class="display-5"><span class="darkmode-element-only">🌙</span><span class="lightmode-element-only">✨</span> on the horizon <span class="lightmode-element-only">✨</span><span class="darkmode-element-only">🌙</span></h2>
 </div>
-<div style="padding-left:2.5em">
-
-    {%- if horizoninfo|length > 0 -%}
-        <div class="plans">
-            {%- for plan in horizoninfo -%}
-                <div class="center-text horizoninfo rightside">
-                    {%- if plan.links != {} -%}
-                        {%- for link in plan.links -%}
-                            <a href="{{ plan.links[link] }}">{{ plan.descriptor }}</a>
-                        {%- endfor -%}
-                    {%- endif -%}
-                    {%- if plan.links == {} -%}
-                        <span>{{ plan.descriptor }}</span>
-                    {%- endif -%}
-                </div>
-            {%- endfor -%}
-        </div>
-    {%- endif -%}
 
 </div>
-</div>
+
 
 <br/>
 
@@ -127,8 +150,8 @@ navbar: fixed
 <div class="center-text rightside">
 <h2 class="display-5"><span class="darkmode-element-only">💅 basics 💅</span><span class="lightmode-element-only">💅 basics 💅</span></h2>
 
-#### <a href="https://course.care/course/71" target="_blank">Office Hours</a>
-#### <a href="https://course.care/course/71" target="_blank">Tutoring</a>
+#### <a href="https://course.care/course/66" target="_blank">Office Hours</a>
+#### <a href="https://course.care/course/66" target="_blank">Tutoring</a>
 #### <a href="https://www.gradescope.com/" target="_blank">Gradescope</a>
 <!--#### <a href="https://www.youtube.com/channel/UCX2Dop_X6MtbcmEVkbjMpSA" target="_blank">Youtube</a>-->
 </div>
@@ -143,8 +166,18 @@ navbar: fixed
 
 #### <a href="/resources/team.html">Comp110 Team</a>
 </div>
-</div>
+</div> #}
+
 
 </div>
 </div>
-</div>
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+</body>
+
+</html>

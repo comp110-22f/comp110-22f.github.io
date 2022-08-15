@@ -7,7 +7,7 @@
     <title> Diagnostic Tool and Codes Library - COMP110 - 22S</title>
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
     <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/style.css?v=1660451181.2048113">
+    <link rel="stylesheet" href="/static/styles.css?v=1660532466.6788313">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/static/scripts/sunset_sunrise.js"></script>
 </head>
@@ -60,73 +60,36 @@
     <div id="content-wrapper">
     <script src="/static/scripts/log-in-element.js"></script>
     <div class="wrapper">
-    <nav id="navbarStick" class="navbar navbar-expand">
-            <div class="container-fluid d-flex">
-                <div class = 'hide-during-scroll'>
-                    <div class="container nav-const">
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                        <a class="navbar-brand web" href="/"><img class="lightmode-element-only img-fluid logo" src="/static/lightbrand.png"
-                        alt="COMP110 - Spring - 2021"><img class="darkmode-element-only img-fluid logo" src="/static/darkbrand.png"
-                        alt="COMP110 - Spring - 2021"></a>
-                        <ul class="navbar-nav web">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/team/allocations">allocations</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/team/documentation">documentation</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/team/career">career</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/team/yearbook">yearbook</a>
-                                </li>
-                            </ul>
-                            <a href="javascript:void(0);" class="icon" id="hamburger">
-                                <i class="fa fa-bars fa-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div id='mode-switch' class="ms-auto form-check form-switch mode">
-                    <div class="switches">
-                        <input type="checkbox" id="1" onclick="
-                            if (localStorage.getItem('mode') === 'dark-mode') {
-                                localStorage.setItem('userPref', 'light-mode');
-                                localStorage.setItem('mode', 'light-mode');
-                            } else {
-                                localStorage.setItem('userPref', 'dark-mode');
-                                localStorage.setItem('mode', 'dark-mode');
-                            }
-                            location.reload();">
-                        <label for="1">
-                            <span id="mode-label">Dark Mode</span>
-                            <span></span>
-                        </label>
-                        <script>if(localStorage.getItem('mode') === 'dark-mode'){document.getElementById("1").checked = true}</script>
-                        <script>if(localStorage.getItem('userPref') === null) {setTimeout(function(){location.reload();}, (timer * 3600000));}</script>
-                    </div>
-                </div>
-            </div>
-             <a class="navbar-brand mobile" href="/"><img class="lightmode-element-only img-fluid logo" src="/static/lightbrand.png"
-                alt="COMP110 - Spring - 2021"><img class="darkmode-element-only img-fluid logo" src="/static/darkbrand.png"
-                alt="COMP110 - Spring - 2021"></a>
-        </nav>
-       
-         <ul class="navbar-nav mobile menu-dropdown fixed-nav-dropdown" id="mobile">
-            <li class="nav-item" id="link1">
-                <a class="nav-link" href="/team/allocations">allocations</a>
-            </li>
-            <li class="nav-item" id="link2">
-                <a class="nav-link" href="/team/documentation">documentation</a>
-            </li>
-            <li class="nav-item" id="link3">
-                <a class="nav-link" href="/team/career">career</a>
-            </li>
-            <li class="nav-item" id ="last-link">
-                <a class="nav-link" href="/team/yearbook">yearbook</a>
-            </li>
-        </ul>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
+      <div class="container">
+        <a href="/" class="navbar-brand">COMP 110</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/team/allocations">allocations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/team/documentation">documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/team/career">career</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/team/yearbook">yearbook</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+  </nav>
 
 <script>
             document.getElementById("hamburger").addEventListener("click", function() {
@@ -157,17 +120,12 @@
     <script src="/static/scripts/toggle-handler.js"></script>
     
     <div class="row px-4">
-    
         <div id="box" class="toc col-xl-3 col-lg-3 order-1 order-lg-2" role="doc-toc">
-            
-            <div id="button-box class="link-pag box">
-            </div>
-
             <div id="menu-overview" class="link-page box">
-                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview<img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-right.png" style="height:15px;"></button>
+                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
                 <div id="overview-links">
                     <div id="TOC" role="doc-toc">
-                        <ul>doc-toc">
+                        <ul class="overview-item">doc-toc">
 <ul>
 <li><a href="#s101---python-is-not-installed">S101 - Python is not installed</a>
 <ul>
@@ -195,8 +153,7 @@
                 </div>
             </div>
         </div>
-
-        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1"><p>In order to run the diagnostic tool run:</p>
+        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><p>In order to run the diagnostic tool run:</p>
 <p><code>python -m tools.diagnostic</code></p>
 <blockquote>
 <p>When running the script you may see ‘codes’ that should correspond to the solutions below:</p>
@@ -366,16 +323,11 @@
 </blockquote>
 </div>
 
+       
+
     </div> 
+              
             
-            <div class='link-page wrapper'>
-            <footer>
-                    <p class="footer-content">&copy; 2021 <a href="https://krisjordan.com">Kris Jordan</a>
-                        - <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLScQMteEvnQpBfGsAYP5TpuqokQenhZUIf8CNvfAUUZEjMCWZQ/viewform?usp=sf_link">Feedback
-                            Form</a> - <a href="https://forms.gle/AjcyFHirwegBKXbq9">Grievances Form</a> - Made with 💛in <a href="https://cs.unc.edu/">Chapel Hill</a></p>
-                </footer>
-            </div>
         </div>
     </div>
     </div>
@@ -399,15 +351,15 @@
 
     <!-- Load our React components. -->
 
-    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1660451181.2048113"></script>
-    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1660451181.2048113"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1660451181.2048113"></script>
-        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1660451181.2048113"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1660451181.2048113"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1660451181.2048113"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1660451181.2048113"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1660451181.2048113"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1660451181.2048113"></script>
+    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1660532466.6788313"></script>
+    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1660532466.6788313"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1660532466.6788313"></script>
+        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1660532466.6788313"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1660532466.6788313"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1660532466.6788313"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1660532466.6788313"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1660532466.6788313"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1660532466.6788313"></script>
     <script src="/static/scripts/log-in-handler.js"></script>
 
     
