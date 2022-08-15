@@ -148,8 +148,21 @@ code{
 
 /* SCHEDULE CUSTOM STYLING */
 
-.date, .kind {
+.plan {
+  margin-bottom: 0.5em;
+}
+
+.plan ul {
+  margin-bottom: 0;
+}
+
+.date, .title, .title>a {
   font-weight: bold;
+}
+
+.kind {
+  width: 3em;
+  display: inline-block;
 }
 
 .async{

@@ -37,7 +37,7 @@
             "date": "2022-08-18",
             "deadline": "2022-08-18",
             "links": {
-                "Watch Lesson": "https://youtu.be/LB9wVRYF9tA"
+                "": "https://youtu.be/LB9wVRYF9tA"
             }
         },
         {
@@ -47,7 +47,7 @@
             "date": "2022-08-18",
             "deadline": "2022-08-18",
             "links": {
-                "Watch Lesson": "https://youtu.be/aMjlaAWp-sw"
+                "": "https://youtu.be/aMjlaAWp-sw"
             }
         },
         {
@@ -57,7 +57,7 @@
             "date": "2022-08-18",
             "deadline": "2022-08-18",
             "links": {
-                "Watch Lesson": "https://youtu.be/CA5-9qXNSqw"
+                "": "https://youtu.be/CA5-9qXNSqw"
             }
         },
         {
@@ -67,7 +67,7 @@
             "date": "2022-08-18",
             "deadline": "2022-08-21",
             "links": {
-                "Read Lesson for Homework": "/lessons/objects-data-types.html"
+                "": "/lessons/objects-data-types.html"
             }
         },
         {
@@ -77,7 +77,7 @@
             "date": "2022-08-18",
             "deadline": "2022-08-21",
             "links": {
-                "Read Lesson for Homework": "/lessons/expressions.html"
+                "": "/lessons/expressions.html"
             }
         }
     ],
@@ -93,7 +93,7 @@
             "date": "2022-08-23",
             "deadline": "2022-08-23",
             "links": {
-                "Watch Lesson": "https://youtu.be/ISP-9wkrlyM"
+                "": "https://youtu.be/ISP-9wkrlyM"
             }
         },
         {
@@ -103,7 +103,7 @@
             "date": "2022-08-23",
             "deadline": "2022-08-23",
             "links": {
-                "Watch Lesson": "https://youtu.be/g8_OERDtJ8c"
+                "": "https://youtu.be/g8_OERDtJ8c"
             }
         },
         {
@@ -113,7 +113,7 @@
             "date": "2022-08-23",
             "deadline": "2022-08-23",
             "links": {
-                "Watch Lesson": "https://youtu.be/wXoUw0scEsI"
+                "": "https://youtu.be/wXoUw0scEsI"
             }
         },
         {
@@ -123,7 +123,7 @@
             "date": "2022-08-23",
             "deadline": "2022-08-23",
             "links": {
-                "Read instructions": "/lessons/cl02-variables.html",
+                "Read Submission Instructions": "/lessons/cl02-variables.html",
                 "Watch Lesson": "https://youtu.be/Vfmuwx3vYKg"
             }
         },
@@ -134,7 +134,7 @@
             "date": "2022-08-23",
             "deadline": "2022-08-23",
             "links": {
-                "Watch Lesson": "https://youtu.be/JP5oFPHw5zc"
+                "": "https://youtu.be/JP5oFPHw5zc"
             }
         },
         {
@@ -144,7 +144,7 @@
             "date": "2022-08-23",
             "deadline": "2022-08-29",
             "links": {
-                "Write-up": "/exercises/ex01.html"
+                "": "/exercises/ex01.html"
             }
         }
     ],
