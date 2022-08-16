@@ -2,6 +2,16 @@
     "2022-08-15": [],
     "2022-08-16": [
         {
+            "kind": "CL",
+            "n": 0,
+            "title": "Welcome to COMP110",
+            "date": "2022-08-16",
+            "deadline": "None",
+            "links": {
+                "Stream / Recording": "https://youtu.be/uyxc_BtpFEY"
+            }
+        },
+        {
             "kind": "LS",
             "n": 0,
             "title": "Syllabus and Support (Due Wednesday 8/17)",
@@ -30,6 +40,16 @@
     ],
     "2022-08-17": [],
     "2022-08-18": [
+        {
+            "kind": "CL",
+            "n": 1,
+            "title": "Async Day - Complete Lessons Below",
+            "date": "2022-08-18",
+            "deadline": "None",
+            "links": {
+                "Need Help? Stop by Sitterson 008 Thu / Fri!": "https://course.care"
+            }
+        },
         {
             "kind": "LS",
             "n": 1,
