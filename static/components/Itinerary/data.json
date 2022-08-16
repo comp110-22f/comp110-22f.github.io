@@ -8,7 +8,7 @@
             "date": "2022-08-16",
             "deadline": "None",
             "links": {
-                "Stream / Recording": "https://youtu.be/uyxc_BtpFEY"
+                "Stream / Recording of Lecture": "https://youtu.be/uyxc_BtpFEY"
             }
         },
         {
@@ -40,16 +40,6 @@
     ],
     "2022-08-17": [],
     "2022-08-18": [
-        {
-            "kind": "CL",
-            "n": 1,
-            "title": "Async Day - Complete Lessons Below",
-            "date": "2022-08-18",
-            "deadline": "None",
-            "links": {
-                "Need Help? Stop by Sitterson 008 Thu / Fri!": "https://course.care"
-            }
-        },
         {
             "kind": "LS",
             "n": 1,
