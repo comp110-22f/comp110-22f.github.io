@@ -110,7 +110,7 @@ def create_overview(source):
         ["pandoc", "-t", "html", source, "--standalone", "--toc", "--toc-depth=3"])
     cleaned_output = output.decode("utf-8")
     cut_output = cleaned_output.split("nav")[1]
-    return cut_output[16:]
+    return cut_output[26:]
 
 
 def generate_html(source: str, globals, body, fixed_navbar, site_branch, overview=""):

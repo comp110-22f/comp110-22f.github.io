@@ -264,14 +264,22 @@ code{
 }
 
 .overview-item ul{
-  list-style-type: none;
   margin: 0;
   padding: 0;
-  
 }
 
 .overview-item ul li{
   list-style: square;
+}
+
+.toc {
+  font-size: 0.9rem;
+}
+.toc > ul {
+  margin-top: 0rem;
+}
+.toc ul {
+  padding-inline-start: 1em;
 }
 
 #menu-overview {
