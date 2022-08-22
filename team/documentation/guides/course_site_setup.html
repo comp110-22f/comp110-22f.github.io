@@ -4,49 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Course Site Setup - COMP110 - 22S</title>
-    <link rel="icon" type="image/png" href="/static/tabbrand.png" />
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1661050232.5412674">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/static/scripts/sunset_sunrise.js"></script>
+    <title> Course Site Setup - COMP110 - 22F</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/styles.css?v=1661190124.740569">
 </head>
 
-<body id="body" class="absolute-page">
-     <script>
-        const lat = 35.912005; // latitude and longitude for Chapel Hill
-        const long = -79.051210; // Replace with some way to gain User location if/when desired
-    </script>
-    <script>
-        // resets user pref in the event of styling overhaul
-        if ((localStorage.getItem('mode') == "halloween-mode") || (localStorage.getItem('userPref') == "halloween-mode")) {
-            localStorage.setItem('userPref', null);
-            localStorage.setItem('mode', null);
-        }
-    
-        var datetime = new Date(); // NOTE: This is my additional scripting to check whereabouts the sun is
-        var time = datetime.getHours() + (datetime.getMinutes() / 60);
-        var timer = 240000000; // a very big number
-        if(localStorage.getItem('userPref') === null) {
-            if(time < getSunrise(lat, long)) {
-                localStorage.setItem('mode', 'dark-mode');
-                timer = getSunrise(lat, long) - time;
-            } else if(time > getSunset(lat, long)) {
-                localStorage.setItem('mode', 'dark-mode');
-                timer = (getSunrise(lat, long) + 24) - time;
-            } else {
-                localStorage.setItem('mode', 'light-mode');
-                timer = getSunset(lat, long) - time;
-            }
-        }
-    </script>
-    <script>
-        document.body.classList.remove('light-mode');
-        document.body.classList.remove('dark-mode');
-        document.body.classList.add(localStorage.getItem('userPref')); // userPref holds which mode the user prefers
-        document.body.classList.add(localStorage.getItem('mode')); // mode holds the current state of the site
-    </script>
-    
+<body id="body" class="absolute-page container">
+  
     <div onKeyPress="return myFunction(event)">
         <form id="log-in" class="center-text" id="form01" action="demo_form.asp" onsubmit="return false;" >
             <h3 style="margin-bottom: 20px">Team Login</h3>
@@ -55,6 +20,8 @@
             <input class="hidden" type="button" value="Submit" onclick="myFunction(0)">
         </form>
     </div>
+
+
     <a name="top"></a>
     <div id="page-container">
     <div id="content-wrapper">
@@ -63,7 +30,7 @@
 
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
       <div class="container">
-        <a href="/" class="navbar-brand">COMP 110</a>
+        <a href="/team" class="navbar-brand">COMP 110</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -73,10 +40,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/team/allocations">allocations</a>
-                </li>
+            <ul class="navbar-nav ms-auto"> 
                 <li class="nav-item">
                     <a class="nav-link" href="/team/documentation">documentation</a>
                 </li>
@@ -89,34 +53,14 @@
             </ul>
         </div>
       </div>
-  </nav>
+    </nav>
 
-<script>
-            document.getElementById("hamburger").addEventListener("click", function() {
-            var x = [];
-            x[0] = document.getElementById("link1");
-            x[1] = document.getElementById("link2");
-            x[2] = document.getElementById("link3");
-            x[3] = document.getElementById("last-link");
-            for (let i = 0; i < 6; i++) {
-                if (x[i].style.display === "block") {
-                    x[i].style.display = "none";
-                    document.getElementById("mobile").style.paddingTop="0";
-                    document.getElementById("mobile").style.paddingBottom="0";
-                    document.getElementById("mobile").style.transition="all 0.5s ease-in-out";
-                    
-                } else {
-                    x[i].style.display = "block";
-                }
-            }
-            });
-        </script>
-        <div id="logistics-page" class="container">
-            <div class="row pt-4">
-                <div class="col-12">
-                    <h1 class="display-5">Course Site Setup</h1>
-                    <hr class="title"/>
-                </div>
+    <div id="logistics-page" class="container">
+        <div class="row pt-4">
+            <div class="col-12">
+            <h2 >Course Site Setup</h2>
+            <hr class="title"/>
+        </div>
     <script src="/static/scripts/toggle-handler.js"></script>
     
     <div class="row px-4">
@@ -137,18 +81,26 @@
                 </div>
             </div>
         </div>
-        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><p>If you have already cloned the team110 repo you can jump to <a href="/course-site-setup#Install-Packages">this step</a>.</p>
+        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><p>If you have already cloned the team110 repo you can jump to <strong>Install Packages</strong>.</p>
 <h2 id="clone-the-team110-repo">Clone the team110 Repo</h2>
 <ul>
-<li><p>Go to <a href="https://github.com/comp110/team110" class="uri">https://github.com/comp110/team110</a> and clone the repo by pressing the green code button. <img src="/static/team/repo-instructions/step_1.png" /></p>
+<li><p>Go to <a href="https://github.com/comp110/team110" class="uri">https://github.com/comp110/team110</a> and clone the repo by pressing the green code button.</p>
+<p><img src="/static/team/repo-instructions/step_1.png" width="500" /></p>
 <blockquote>
 <p>If you can’t open this link, you have not been added to the team org on Github. Send your github username to Kris!</p>
 </blockquote></li>
-<li><p>Open the <code>Team 110.code-workspace</code> file in VSCODE as a Workspace (don’t just open the top-level directory) <img src="/static/team/repo-instructions/step_2.png" /></p></li>
-<li><p>Make sure you’re in the <code>team110</code> folder in your terminal and the master branch. <img src="/static/team/repo-instructions/step_3.png" /></p></li>
+<li><p>Open the <code>Team 110.code-workspace</code> file in VSCODE as a Workspace (don’t just open the top-level directory)</p>
+<p><img src="/static/team/repo-instructions/step_2.png" width="500" /></p></li>
+<li><p>Make sure you’re in the <code>team110</code> folder in your terminal and the master branch.</p>
+<p><img src="/static/team/repo-instructions/step_3.png" width="500" /></p></li>
 </ul>
 <h2 id="install-packages">Install Packages</h2>
-<p>Note: You may have done this step before, but there are often new dependencies being added, so make sure to run the command again. - Update pip by running: <code>python -m pip install -U pip</code>. - Make sure your terminal is in the right directory. If you type <code>pwd</code> in the terminal it should print <code>/Some/Path/.../team110/code</code>. If you do not see this, trash the terminal and create a new one. When you create a new one it should prompt you for the desired working directory – select the <code>code</code> option. - Install required PyPI packages in <code>requirements.txt</code> with the following command: <code>python -m pip install -r requirements.txt</code>.</p>
+<p>Note: You may have done this step before, but there are often new dependencies being added, so make sure to run the command again.</p>
+<ul>
+<li>Update pip by running: <code>python -m pip install -U pip</code>.</li>
+<li>Make sure your terminal is in the right directory. If you type <code>pwd</code> in the terminal it should print <code>/Some/Path/.../team110/code</code>. If you do not see this, trash the terminal and create a new one. When you create a new one it should prompt you for the desired working directory – select the <code>code</code> option.</li>
+<li>Install required PyPI packages in <code>requirements.txt</code> with the following command: <code>python -m pip install -r requirements.txt</code>.</li>
+</ul>
 <h2 id="install-pandoc">Install Pandoc</h2>
 <p>In order to run the dev server, pandoc is needed and can be downloaded <a href="https://pandoc.org/installing.html">here</a>. Follow the instructions to download. You may need to restart vscode in order to run the dev server.</p>
 <h2 id="run-the-development-script">Run the Development Script</h2>
@@ -166,30 +118,36 @@
 <li>The benefit of the <code>hotdev</code> script is it enables what is referred to as hot-reload or autoreload. When ever you make markdown or css changes, your browser will refresh on save of file instead of having to be manually reloaded.</li>
 <li>It is reccomended to use this script primarily when trying to finish up organizing and styling a page, or making many CSS changes.</li>
 </ul>
-<blockquote>
-<p>Contributors: Kaki Ryan, Ezri White, Chiazo Agina</p>
-</blockquote>
 </div>
 
        
 
     </div> 
-              
-            
-        </div>
+    </div>
+
     </div>
     </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"
-        integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc=" crossorigin="anonymous"></script>
-    <script src="/static/script.js"></script>
+
+    <div class="authors-box bg-light mt-4 py-3 ps-4">
+      <span> Contributor(s):              Ezri White,              Kaki Ryan, Chiazo Agina</span>
+    </div>       
+  </div>
+
+  <div class='link-page mt-3 container'>
+    <footer>
+        <h6 class="text-center align-middle footer-text">&copy; 2022 <a href="https://krisjordan.com">Kris Jordan</a>
+          - <a href="https://docs.google.com/forms/d/e/1FAIpQLScQMteEvnQpBfGsAYP5TpuqokQenhZUIf8CNvfAUUZEjMCWZQ/viewform?usp=sf_link">Feedback Form</a>
+          - Made with 💛 in <a href="https://cs.unc.edu/">Chapel Hill</a></h6>
+      </footer>
+  </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -199,15 +157,15 @@
 
     <!-- Load our React components. -->
 
-    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1661050232.5412674"></script>
-    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1661050232.5412674"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1661050232.5412674"></script>
-        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1661050232.5412674"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1661050232.5412674"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1661050232.5412674"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1661050232.5412674"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1661050232.5412674"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1661050232.5412674"></script>
+    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1661190124.740569"></script>
+    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1661190124.740569"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1661190124.740569"></script>
+        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1661190124.740569"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1661190124.740569"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1661190124.740569"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1661190124.740569"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1661190124.740569"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1661190124.740569"></script>
     <script src="/static/scripts/log-in-handler.js"></script>
 
     

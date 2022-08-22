@@ -4,49 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Common Python Setup Issues - COMP110 - 22S</title>
-    <link rel="icon" type="image/png" href="/static/tabbrand.png" />
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1661050233.128136">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/static/scripts/sunset_sunrise.js"></script>
+    <title> Common Python Setup Issues - COMP110 - 22F</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/styles.css?v=1661190125.3726254">
 </head>
 
-<body id="body" class="absolute-page">
-     <script>
-        const lat = 35.912005; // latitude and longitude for Chapel Hill
-        const long = -79.051210; // Replace with some way to gain User location if/when desired
-    </script>
-    <script>
-        // resets user pref in the event of styling overhaul
-        if ((localStorage.getItem('mode') == "halloween-mode") || (localStorage.getItem('userPref') == "halloween-mode")) {
-            localStorage.setItem('userPref', null);
-            localStorage.setItem('mode', null);
-        }
-    
-        var datetime = new Date(); // NOTE: This is my additional scripting to check whereabouts the sun is
-        var time = datetime.getHours() + (datetime.getMinutes() / 60);
-        var timer = 240000000; // a very big number
-        if(localStorage.getItem('userPref') === null) {
-            if(time < getSunrise(lat, long)) {
-                localStorage.setItem('mode', 'dark-mode');
-                timer = getSunrise(lat, long) - time;
-            } else if(time > getSunset(lat, long)) {
-                localStorage.setItem('mode', 'dark-mode');
-                timer = (getSunrise(lat, long) + 24) - time;
-            } else {
-                localStorage.setItem('mode', 'light-mode');
-                timer = getSunset(lat, long) - time;
-            }
-        }
-    </script>
-    <script>
-        document.body.classList.remove('light-mode');
-        document.body.classList.remove('dark-mode');
-        document.body.classList.add(localStorage.getItem('userPref')); // userPref holds which mode the user prefers
-        document.body.classList.add(localStorage.getItem('mode')); // mode holds the current state of the site
-    </script>
-    
+<body id="body" class="absolute-page container">
+  
     <div onKeyPress="return myFunction(event)">
         <form id="log-in" class="center-text" id="form01" action="demo_form.asp" onsubmit="return false;" >
             <h3 style="margin-bottom: 20px">Team Login</h3>
@@ -55,6 +20,8 @@
             <input class="hidden" type="button" value="Submit" onclick="myFunction(0)">
         </form>
     </div>
+
+
     <a name="top"></a>
     <div id="page-container">
     <div id="content-wrapper">
@@ -63,7 +30,7 @@
 
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
       <div class="container">
-        <a href="/" class="navbar-brand">COMP 110</a>
+        <a href="/team" class="navbar-brand">COMP 110</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -73,10 +40,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/team/allocations">allocations</a>
-                </li>
+            <ul class="navbar-nav ms-auto"> 
                 <li class="nav-item">
                     <a class="nav-link" href="/team/documentation">documentation</a>
                 </li>
@@ -89,34 +53,14 @@
             </ul>
         </div>
       </div>
-  </nav>
+    </nav>
 
-<script>
-            document.getElementById("hamburger").addEventListener("click", function() {
-            var x = [];
-            x[0] = document.getElementById("link1");
-            x[1] = document.getElementById("link2");
-            x[2] = document.getElementById("link3");
-            x[3] = document.getElementById("last-link");
-            for (let i = 0; i < 6; i++) {
-                if (x[i].style.display === "block") {
-                    x[i].style.display = "none";
-                    document.getElementById("mobile").style.paddingTop="0";
-                    document.getElementById("mobile").style.paddingBottom="0";
-                    document.getElementById("mobile").style.transition="all 0.5s ease-in-out";
-                    
-                } else {
-                    x[i].style.display = "block";
-                }
-            }
-            });
-        </script>
-        <div id="logistics-page" class="container">
-            <div class="row pt-4">
-                <div class="col-12">
-                    <h1 class="display-5">Common Python Setup Issues</h1>
-                    <hr class="title"/>
-                </div>
+    <div id="logistics-page" class="container">
+        <div class="row pt-4">
+            <div class="col-12">
+            <h2 >Common Python Setup Issues</h2>
+            <hr class="title"/>
+        </div>
     <script src="/static/scripts/toggle-handler.js"></script>
     
     <div class="row px-4">
@@ -216,30 +160,36 @@
 <p><strong>Solution</strong>: Uninstall and reinstall python via Start &gt; Add/Remove Programs and BE SURE “Add Python to PATH” is selected. Continue install. Try again from a <em>new terminal session</em> and, worst case, reboot if still an issue.</p>
 <h3 id="git-bash-permission-denied">git bash permission denied</h3>
 <p><strong>Solution</strong>: try using py instead of python So: py –version instead of python –version</p>
-<blockquote>
-<p>Contributors: Everyone!</p>
-</blockquote>
 </div>
 
        
 
     </div> 
-              
-            
-        </div>
+    </div>
+
     </div>
     </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"
-        integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc=" crossorigin="anonymous"></script>
-    <script src="/static/script.js"></script>
+
+    <div class="authors-box bg-light mt-4 py-3 ps-4">
+      <span> Contributor(s): Ezri White</span>
+    </div>       
+  </div>
+
+  <div class='link-page mt-3 container'>
+    <footer>
+        <h6 class="text-center align-middle footer-text">&copy; 2022 <a href="https://krisjordan.com">Kris Jordan</a>
+          - <a href="https://docs.google.com/forms/d/e/1FAIpQLScQMteEvnQpBfGsAYP5TpuqokQenhZUIf8CNvfAUUZEjMCWZQ/viewform?usp=sf_link">Feedback Form</a>
+          - Made with 💛 in <a href="https://cs.unc.edu/">Chapel Hill</a></h6>
+      </footer>
+  </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -249,15 +199,15 @@
 
     <!-- Load our React components. -->
 
-    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1661050233.128136"></script>
-    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1661050233.128136"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1661050233.128136"></script>
-        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1661050233.128136"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1661050233.128136"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1661050233.128136"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1661050233.128136"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1661050233.128136"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1661050233.128136"></script>
+    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1661190125.3726254"></script>
+    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1661190125.3726254"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1661190125.3726254"></script>
+        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1661190125.3726254"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1661190125.3726254"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1661190125.3726254"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1661190125.3726254"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1661190125.3726254"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1661190125.3726254"></script>
     <script src="/static/scripts/log-in-handler.js"></script>
 
     
