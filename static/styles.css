@@ -217,6 +217,10 @@ code{
   object-fit: cover;
 }
 
+#profile-page figcaption {
+  display: none;
+}
+
 /* Team Site Login  */
 #log-in {
   width: 20%;
