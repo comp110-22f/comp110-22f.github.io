@@ -169,8 +169,7 @@
             "links": {
                 "What to Expect": "/resources/quiz-expectations.html",
                 "Practice Problems": "/resources/practice/fa22/quiz0-worksheet.html",
-                "Covered Topics: Syllabus, Resources Page, LS01-LS07, CQ00-CQ02": "",
-                "Pre-quiz Recording": "https://youtu.be/_y1wsMQ1m-w"
+                "Covered Topics: Syllabus, Resources Page, LS01-LS07, CQ00-CQ02": ""
             }
         }
     ],
@@ -178,21 +177,143 @@
     "2022-08-27": [],
     "2022-08-28": [],
     "2022-08-29": [],
-    "2022-08-30": [],
+    "2022-08-30": [
+        {
+            "kind": "LS",
+            "n": 8,
+            "title": "while Loop Statements",
+            "date": "2022-08-30",
+            "deadline": "2022-08-30",
+            "links": {
+                "": "https://www.youtube.com/watch?v=pvpgvYlyfUU"
+            }
+        },
+        {
+            "kind": "LS",
+            "n": 9,
+            "title": "bool Operators: not, and, or",
+            "date": "2022-08-30",
+            "deadline": "2022-08-30",
+            "links": {
+                "": "https://www.youtube.com/watch?v=HYq9Zoigoc4"
+            }
+        },
+        {
+            "kind": "CQ",
+            "n": 3,
+            "title": "Nested Control Flow Statements",
+            "date": "2022-08-30",
+            "deadline": "2022-08-30",
+            "links": {
+                "": "https://youtu.be/7iDxEnqXmpc"
+            }
+        },
+        {
+            "kind": "EX",
+            "n": 2,
+            "title": "One-shot Wordle (Due Thursday 9/8)",
+            "date": "2022-08-30",
+            "deadline": "2022-09-08",
+            "links": {
+                "": "/exercises/ex02.html"
+            }
+        },
+        {
+            "kind": "RD",
+            "n": 0,
+            "title": "Reading: The Ethical Algorithm Chapter on Gradescope (Due Monday 9/19)",
+            "date": "2022-08-30",
+            "deadline": "2022-09-19",
+            "links": {}
+        }
+    ],
     "2022-08-31": [],
-    "2022-09-01": [],
+    "2022-09-01": [
+        {
+            "kind": "CL",
+            "n": 1,
+            "title": "Sync In-person: Practice with if/while statements and bool expressions",
+            "date": "2022-09-01",
+            "deadline": "None",
+            "links": {
+                "": "https://youtu.be/3PuQsa5uK_A"
+            }
+        },
+        {
+            "kind": "LS",
+            "n": 10,
+            "title": "Homework: Introducing Functions (Due Wednesday 9/7)",
+            "date": "2022-09-01",
+            "deadline": "2022-09-07",
+            "links": {
+                "": "https://youtu.be/UheQNnstJE8"
+            }
+        },
+        {
+            "kind": "LS",
+            "n": 11,
+            "title": "Homework: Function Syntax (Due Wednesday 9/7)",
+            "date": "2022-09-01",
+            "deadline": "2022-09-07",
+            "links": {
+                "": "https://youtu.be/ihpN4LOqx8s"
+            }
+        },
+        {
+            "kind": "LS",
+            "n": 12,
+            "title": "Homework: Function Semantics (Due Wednesday 9/7)",
+            "date": "2022-09-01",
+            "deadline": "2022-09-07",
+            "links": {
+                "": "https://youtu.be/_swT3gKjDVg"
+            }
+        }
+    ],
     "2022-09-02": [],
     "2022-09-03": [],
     "2022-09-04": [],
     "2022-09-05": [],
     "2022-09-06": [],
     "2022-09-07": [],
-    "2022-09-08": [],
+    "2022-09-08": [
+        {
+            "kind": "CL",
+            "n": 2,
+            "title": "Sync In-person: Practice with Functions",
+            "date": "2022-09-08",
+            "deadline": "None",
+            "links": {
+                "": "https://youtu.be/iPmCxTtBNis"
+            }
+        },
+        {
+            "kind": "EX",
+            "n": 3,
+            "title": "Structured Wordle (Due Wednesday 9/14)",
+            "date": "2022-09-08",
+            "deadline": "2022-09-14",
+            "links": {
+                "Write-up coming soon": ""
+            }
+        }
+    ],
     "2022-09-09": [],
     "2022-09-10": [],
     "2022-09-11": [],
     "2022-09-12": [],
-    "2022-09-13": [],
+    "2022-09-13": [
+        {
+            "kind": "EX",
+            "n": 4,
+            "title": "List Utils (Due Monday 9/19)",
+            "date": "2022-09-13",
+            "deadline": "2022-09-19",
+            "links": {
+                "Write-up coming soon": ""
+            }
+        }
+    ],
     "2022-09-14": [],
     "2022-09-15": [],
     "2022-09-16": [],

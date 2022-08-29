@@ -157,5 +157,21 @@
                 "": "/exercises/ex01.html"
             }
         }
-    ]
+    ],
+    "2022-08-24": [],
+    "2022-08-25": [
+        {
+            "kind": "QZ",
+            "n": 0,
+            "title": "Quiz 0",
+            "date": "2022-08-25",
+            "deadline": "2022-08-25",
+            "links": {
+                "What to Expect": "/resources/quiz-expectations.html",
+                "Practice Problems": "/resources/practice/fa22/quiz0-worksheet.html",
+                "Covered Topics: Syllabus, Resources Page, LS01-LS07, CQ00-CQ02": ""
+            }
+        }
+    ],
+    "2022-08-26": []
 }
