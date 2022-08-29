@@ -5,7 +5,6 @@
 /* Color Variables */
 
 :root {
-  /* VSC Theme Inspired? */
   --primary-blue: #7acdfa;
   --white: #ffffff;
   --purple: #a44ae5;
@@ -41,7 +40,6 @@ code{
 }
 
 .box{
-  /* Change Color */
   background-color: var(--gray);
   width: 100%;
   border-radius: 5px;
@@ -49,9 +47,18 @@ code{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
 }
 
+.header{
+  font-weight: bold;
+  color:#080808;
+}
+
 .header ul{
   padding: 0; 
   list-style-type: none;
+}
+
+.primary-blue{
+  color: var(--primary-blue)
 }
 
 /* Removes button outline */
@@ -108,43 +115,78 @@ code{
   }
 
   .link-page a:hover {
-
     -webkit-text-fill-color: var(--primary-blue);
-
   }
   
-  /* HOME PAGE BUTTON STYLING */
+  /* go to the past BUTTON STYLING */
 
-  .latest-btn{
-  background: var(--purple);
-  box-shadow: var(--purple) 0 10px 20px -15px;
+  .past-btn{
+  background: var(--gray);
+  box-shadow: var(--gray) 0 10px 20px -15px;
   border-radius: 5px;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   opacity: 1;
   outline: 0 solid transparent;
-  padding: 12px 18px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
+  padding: 11px 22px;
   border: 0;
 }
   
-  .latest-btn:hover {
-    color:var(--purple); 
-    background-color: #ffffff;
-    box-shadow: #ffffff 0 10px 20px -10px;
-  }
+/* On the Horizon Box */
 
-  .primary-blue{
-    color: var(--primary-blue)
-  }
+.horizon-box{
+  background-color: var(--purple);
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
+}
+
+.horizon-box .header{
+  color: white;
+}
+
+.horizon-item{
+  margin: 10px;
+  text-align: center;
+  list-style: none;
+
+}
+
+.horizon-item a{
+  -webkit-text-fill-color: white;
+}
+
+.horizon-item a:hover{
+  -webkit-text-fill-color: black;
+}
+
+/* Past Lectures Button */
+
+.past-btn{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
+}
+.past-btn:hover {
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.24);
+ 
+}
+
+.past-link a:hover{
+  -webkit-text-fill-color: black;
+}
+
+.past-text{
+  font-size: 1.1em;
+}
+
+.down-arrow{
+  font-size: 0.8em;
+}
 
 /* SCHEDULE CUSTOM STYLING */
 
@@ -167,41 +209,13 @@ code{
   color: #888;
 }
 
-.async{
-  color: var(--pink);
-  
-}
-
-.sync{
-  color: var(--purple);
-}
-
-.assignment{
-  color: var(--green);
-}
-
-.exam{
-  color: var(--navy);
-}
-
 .horizon-item{
-  /* padding-right: 50px; */
-  
   margin: 10px;
-  
   text-align: center;
   list-style: none;
 
 }
 
-.header{
-  font-weight: bold;
-  color:#080808;
-}
-
-.data-tippy-size{
-  font-size: 5px;
-}
 
 /* TEAM PROFILES */
 
@@ -222,6 +236,7 @@ code{
 }
 
 /* Team Site Login  */
+
 #log-in {
   width: 20%;
   height: 160px;
@@ -283,9 +298,6 @@ code{
   font-size: 12px;
 }
 
-
-
-    
    
 /** ---------------------- PANDOC GENERATED SYNTAX HIGHLIGHTING ---------------------- **/
 

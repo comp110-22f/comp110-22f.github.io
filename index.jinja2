@@ -19,7 +19,7 @@ template: home
 
 <!-- Horizon Box/Column -->
 <div class="col-lg-4 col-md-12 col-md-1 order-lg-3 pt-5"> 
-    <div class="box">
+    <div class="horizon-box mb-3">
         <h3 class="header text-center pt-2">On The Horizon</h3>
         {%- if horizoninfo|length > 0 -%}
             <ul class="list-unstyled d-flex  px-sm-5 px-md-5 px-lg-0 flex-wrap justify-content-center justify-content-md-between justify-content-lg-center align-items-center">
@@ -36,7 +36,15 @@ template: home
                     </li>
                 {%- endfor -%}
             </ul>
-        {%- endif -%}
+        {%- endif -%} 
+    </div>
+    {# Button to bring page to the past section of itinerary #}
+    <div class="past-link">
+        <a href="#past">
+            <div class="past-btn">
+                <div class="text-center align-middle past-text">Past Lectures <span class="down-arrow">&darr;</span></div>
+            </div>
+        </a>
     </div>
 </div>
 
@@ -47,7 +55,7 @@ template: home
     <div id="latest" class="pb-3"></div>
     <br>
     <!-- Current Week and Future -->
-    <h3 class="header pt-3">This Week and Coming Up</h3></div>
+    <h3 class="header">This Week and Coming Up</h3></div> 
     {%- for date in future -%}
         {%- if future[date]|length > 0 -%}
             <div data-type="lecture" data-date="{{ date }}" class="row itinerary-row py-2">
@@ -124,30 +132,3 @@ template: home
 {%- endif -%}
 </div>
 </div>
-
-
-
-{# <div class="col col-lg-4 order-1 order-lg-2">
-<div class="center-text quote hide-mobile">
-
-#### _“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”_ 
- ~ Alan Turing  
-</div>
-<div id="menu-overview-fixed">
-<div class="box horizon-box">
-<div class="center-text">
-<h2 class="display-5"><span class="darkmode-element-only">🌙</span><span class="lightmode-element-only">✨</span> on the horizon <span class="lightmode-element-only">✨</span><span class="darkmode-element-only">🌙</span></h2>
-</div>
-
-</div>
-
-
-<br/>
-
-<div class="box hide-mobile">
-<div class="center-text rightside">
-<h2 class="display-5"><span class="darkmode-element-only">🧚‍♀️</span><span class="lightmode-element-only">🧚‍♀️</span> meet the team <span class="darkmode-element-only">🧚‍♀️</span><span class="lightmode-element-only">🧚‍♀️</span></h2>
-
-#### <a href="/resources/team.html">Comp110 Team</a>
-</div>
-</div> #}
