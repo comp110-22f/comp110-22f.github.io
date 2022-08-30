@@ -61,6 +61,10 @@ code{
   color: var(--primary-blue)
 }
 
+.green{
+  color: var(--green);
+}
+
 /* Removes button outline */
 .btn:focus {
   outline: none;
