@@ -1,6 +1,4 @@
 {
-    "2022-08-28": [],
-    "2022-08-29": [],
     "2022-08-30": [
         {
             "kind": "LS",
@@ -39,7 +37,8 @@
             "date": "2022-08-30",
             "deadline": "2022-09-08",
             "links": {
-                "": "/exercises/ex02.html"
+                "Exercise Write-up": "/exercises/ex02.html",
+                "LS10 - Unicode, Emoji, Escape Sequences, and f-Strings": "https://22f.comp110.com/lessons/strings.html"
             }
         },
         {
@@ -60,12 +59,13 @@
             "date": "2022-09-01",
             "deadline": "None",
             "links": {
-                "": "https://youtu.be/3PuQsa5uK_A"
+                "Stream / Recording": "https://youtu.be/3PuQsa5uK_A",
+                "Slides": "/static/slides/cl01-control-flow-practice.pdf"
             }
         },
         {
             "kind": "LS",
-            "n": 10,
+            "n": 11,
             "title": "Homework: Introducing Functions (Due Wednesday 9/7)",
             "date": "2022-09-01",
             "deadline": "2022-09-07",
@@ -75,7 +75,7 @@
         },
         {
             "kind": "LS",
-            "n": 11,
+            "n": 12,
             "title": "Homework: Function Syntax (Due Wednesday 9/7)",
             "date": "2022-09-01",
             "deadline": "2022-09-07",
@@ -85,7 +85,7 @@
         },
         {
             "kind": "LS",
-            "n": 12,
+            "n": 13,
             "title": "Homework: Function Semantics (Due Wednesday 9/7)",
             "date": "2022-09-01",
             "deadline": "2022-09-07",
