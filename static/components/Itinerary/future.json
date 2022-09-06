@@ -1,101 +1,4 @@
 {
-    "2022-08-30": [
-        {
-            "kind": "LS",
-            "n": 8,
-            "title": "while Loop Statements",
-            "date": "2022-08-30",
-            "deadline": "2022-08-30",
-            "links": {
-                "": "https://www.youtube.com/watch?v=pvpgvYlyfUU"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 9,
-            "title": "bool Operators: not, and, or",
-            "date": "2022-08-30",
-            "deadline": "2022-08-30",
-            "links": {
-                "": "https://www.youtube.com/watch?v=HYq9Zoigoc4"
-            }
-        },
-        {
-            "kind": "CQ",
-            "n": 3,
-            "title": "Nested Control Flow Statements",
-            "date": "2022-08-30",
-            "deadline": "2022-08-30",
-            "links": {
-                "": "https://youtu.be/7iDxEnqXmpc"
-            }
-        },
-        {
-            "kind": "EX",
-            "n": 2,
-            "title": "One-shot Wordle (Due Thursday 9/8)",
-            "date": "2022-08-30",
-            "deadline": "2022-09-08",
-            "links": {
-                "Exercise Write-up": "/exercises/ex02.html",
-                "LS10 - Unicode, Emoji, Escape Sequences, and f-Strings": "https://22f.comp110.com/lessons/strings.html"
-            }
-        },
-        {
-            "kind": "RD",
-            "n": 0,
-            "title": "Reading: The Ethical Algorithm Chapter on Gradescope (Due Monday 9/19)",
-            "date": "2022-08-30",
-            "deadline": "2022-09-19",
-            "links": {}
-        }
-    ],
-    "2022-08-31": [],
-    "2022-09-01": [
-        {
-            "kind": "CL",
-            "n": 1,
-            "title": "Sync In-person: Practice with if/while statements and bool expressions",
-            "date": "2022-09-01",
-            "deadline": "None",
-            "links": {
-                "Stream / Recording": "https://youtu.be/3PuQsa5uK_A",
-                "Slides": "/static/slides/cl01-control-flow-practice.pdf"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 11,
-            "title": "Homework: Introducing Functions (Due Wednesday 9/7)",
-            "date": "2022-09-01",
-            "deadline": "2022-09-07",
-            "links": {
-                "": "https://youtu.be/UheQNnstJE8"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 12,
-            "title": "Homework: Function Syntax (Due Wednesday 9/7)",
-            "date": "2022-09-01",
-            "deadline": "2022-09-07",
-            "links": {
-                "": "https://youtu.be/ihpN4LOqx8s"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 13,
-            "title": "Homework: Function Semantics (Due Wednesday 9/7)",
-            "date": "2022-09-01",
-            "deadline": "2022-09-07",
-            "links": {
-                "": "https://youtu.be/_swT3gKjDVg"
-            }
-        }
-    ],
-    "2022-09-02": [],
-    "2022-09-03": [],
     "2022-09-04": [],
     "2022-09-05": [],
     "2022-09-06": [],
@@ -118,7 +21,7 @@
             "date": "2022-09-08",
             "deadline": "2022-09-14",
             "links": {
-                "Write-up coming soon": ""
+                "": "/exercises/ex03.html"
             }
         }
     ],
@@ -127,6 +30,16 @@
     "2022-09-11": [],
     "2022-09-12": [],
     "2022-09-13": [
+        {
+            "kind": "LS",
+            "n": 14,
+            "title": "Lists",
+            "date": "2022-09-13",
+            "deadline": "2022-09-13",
+            "links": {
+                "": "https://www.youtube.com/watch?v=uGsgE_EKI4U"
+            }
+        },
         {
             "kind": "EX",
             "n": 4,

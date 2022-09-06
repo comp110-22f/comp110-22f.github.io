@@ -296,7 +296,7 @@
             "date": "2022-09-08",
             "deadline": "2022-09-14",
             "links": {
-                "Write-up coming soon": ""
+                "": "/exercises/ex03.html"
             }
         }
     ],
@@ -305,6 +305,16 @@
     "2022-09-11": [],
     "2022-09-12": [],
     "2022-09-13": [
+        {
+            "kind": "LS",
+            "n": 14,
+            "title": "Lists",
+            "date": "2022-09-13",
+            "deadline": "2022-09-13",
+            "links": {
+                "": "https://www.youtube.com/watch?v=uGsgE_EKI4U"
+            }
+        },
         {
             "kind": "EX",
             "n": 4,
