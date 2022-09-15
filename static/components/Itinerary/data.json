@@ -225,7 +225,9 @@
             "title": "Reading: The Ethical Algorithm Chapter on Gradescope (Due Monday 9/19)",
             "date": "2022-08-30",
             "deadline": "2022-09-19",
-            "links": {}
+            "links": {
+                "": "https://gradescope.com"
+            }
         }
     ],
     "2022-08-31": [],
@@ -328,7 +330,20 @@
         }
     ],
     "2022-09-14": [],
-    "2022-09-15": [],
+    "2022-09-15": [
+        {
+            "kind": "CL",
+            "n": 3,
+            "title": "Sync In-person: Practice with Lists",
+            "date": "2022-09-15",
+            "deadline": "None",
+            "links": {
+                "Survey - Complete by Friday 9/16": "https://bit.ly/comp110-survey-22f",
+                "Slides": "/static/slides/cl03-list-practice.pdf",
+                "Recording": "https://youtu.be/s_Ww0rpBgzE"
+            }
+        }
+    ],
     "2022-09-16": [],
     "2022-09-17": [],
     "2022-09-18": [],
@@ -342,7 +357,11 @@
             "title": "Quiz 1",
             "date": "2022-09-22",
             "deadline": "2022-09-22",
-            "links": {}
+            "links": {
+                "Tutoring - Tue/Wed - 4pm to 7pm": "https://course.care",
+                "Review Session - Weds - 6pm in SN014": "https://course.care",
+                "Practice Problems": "/resources/practice/fa22/quiz1-worksheet.html"
+            }
         }
     ],
     "2022-09-23": [],

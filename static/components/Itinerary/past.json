@@ -225,7 +225,9 @@
             "title": "Reading: The Ethical Algorithm Chapter on Gradescope (Due Monday 9/19)",
             "date": "2022-08-30",
             "deadline": "2022-09-19",
-            "links": {}
+            "links": {
+                "": "https://gradescope.com"
+            }
         }
     ],
     "2022-08-31": [],
@@ -275,5 +277,34 @@
     "2022-09-02": [],
     "2022-09-03": [],
     "2022-09-04": [],
-    "2022-09-05": []
+    "2022-09-05": [],
+    "2022-09-06": [],
+    "2022-09-07": [],
+    "2022-09-08": [
+        {
+            "kind": "CL",
+            "n": 2,
+            "title": "Sync In-person: Practice with Functions",
+            "date": "2022-09-08",
+            "deadline": "None",
+            "links": {
+                "Slides": "/static/slides/cl02-function-practice.pdf",
+                "Recording": "https://youtu.be/iPmCxTtBNis"
+            }
+        },
+        {
+            "kind": "EX",
+            "n": 3,
+            "title": "Structured Wordle (Due Wednesday 9/14)",
+            "date": "2022-09-08",
+            "deadline": "2022-09-14",
+            "links": {
+                "": "/exercises/ex03.html"
+            }
+        }
+    ],
+    "2022-09-09": [],
+    "2022-09-10": [],
+    "2022-09-11": [],
+    "2022-09-12": []
 }
