@@ -306,5 +306,42 @@
     "2022-09-09": [],
     "2022-09-10": [],
     "2022-09-11": [],
-    "2022-09-12": []
+    "2022-09-12": [],
+    "2022-09-13": [
+        {
+            "kind": "LS",
+            "n": 14,
+            "title": "Lists",
+            "date": "2022-09-13",
+            "deadline": "2022-09-13",
+            "links": {
+                "": "https://www.youtube.com/watch?v=uGsgE_EKI4U"
+            }
+        },
+        {
+            "kind": "EX",
+            "n": 4,
+            "title": "List Utils (Due Monday 9/19)",
+            "date": "2022-09-13",
+            "deadline": "2022-09-19",
+            "links": {
+                "": "/exercises/ex04.html"
+            }
+        }
+    ],
+    "2022-09-14": [],
+    "2022-09-15": [
+        {
+            "kind": "CL",
+            "n": 3,
+            "title": "Sync In-person: Practice with Lists",
+            "date": "2022-09-15",
+            "deadline": "None",
+            "links": {
+                "Survey - Complete by Friday 9/16": "https://bit.ly/comp110-survey-22f",
+                "Slides": "/static/slides/cl03-list-practice.pdf",
+                "Recording": "https://youtu.be/s_Ww0rpBgzE"
+            }
+        }
+    ]
 }

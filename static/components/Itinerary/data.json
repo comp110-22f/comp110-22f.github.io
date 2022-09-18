@@ -348,7 +348,38 @@
     "2022-09-17": [],
     "2022-09-18": [],
     "2022-09-19": [],
-    "2022-09-20": [],
+    "2022-09-20": [
+        {
+            "kind": "LS",
+            "n": 15,
+            "title": "Importing modules & functions",
+            "date": "2022-09-20",
+            "deadline": "2022-09-20",
+            "links": {
+                "": "https://www.youtube.com/watch?v=uTc39ZXStP0"
+            }
+        },
+        {
+            "kind": "LS",
+            "n": 16,
+            "title": "Unit Testing",
+            "date": "2022-09-20",
+            "deadline": "2022-09-20",
+            "links": {
+                "": "https://www.youtube.com/watch?v=VAdJybtia-4"
+            }
+        },
+        {
+            "kind": "EX",
+            "n": 5,
+            "title": "list Utils + Unit Tests (Due Monday 9/26)",
+            "date": "2022-09-20",
+            "deadline": "2022-09-26",
+            "links": {
+                "": "/exercises/ex05.html"
+            }
+        }
+    ],
     "2022-09-21": [],
     "2022-09-22": [
         {
@@ -358,6 +389,7 @@
             "date": "2022-09-22",
             "deadline": "2022-09-22",
             "links": {
+                "Covers through LS14 (Does NOT cover LS15/16!)": "",
                 "Tutoring - Tue/Wed - 4pm to 7pm": "https://course.care",
                 "Review Session - Weds - 6pm in SN014": "https://course.care",
                 "Practice Problems": "/resources/practice/fa22/quiz1-worksheet.html"
@@ -368,7 +400,38 @@
     "2022-09-24": [],
     "2022-09-25": [],
     "2022-09-26": [],
-    "2022-09-27": [],
+    "2022-09-27": [
+        {
+            "kind": "LS",
+            "n": 17,
+            "title": "Scopes, Globals, and Constants",
+            "date": "2022-09-27",
+            "deadline": "2022-09-27",
+            "links": {
+                "": "/lessons/scopes-constants-globals.html"
+            }
+        },
+        {
+            "kind": "LS",
+            "n": 18,
+            "title": "for..in Loops",
+            "date": "2022-09-27",
+            "deadline": "2022-09-27",
+            "links": {
+                "": "https://www.youtube.com/watch?v=YPfFCD_RGK8"
+            }
+        },
+        {
+            "kind": "EX",
+            "n": 6,
+            "title": "Choose Your Own Adventure (Due Monday 10/3)",
+            "date": "2022-09-27",
+            "deadline": "2022-10-03",
+            "links": {
+                "Write-up Coming Soon": ""
+            }
+        }
+    ],
     "2022-09-28": [],
     "2022-09-29": [],
     "2022-09-30": [],
