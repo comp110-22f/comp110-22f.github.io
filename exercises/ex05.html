@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1663539609.1334927">
+    <link rel="stylesheet" href="/static/styles.css?v=1663539716.5663404">
 </head>
 <body>
 
@@ -110,7 +110,7 @@ from utils import concat</code></pre>
 <p>If your screen is large enough, you are encouraged to open these files side-by-side in VSCode by dragging the tab of one to the right side of VSCode so that it changes to a split pane view. Closing your file explorer can help give you additional horizontal space.</p>
 <h2 id="only_evens-25-points">1. <code>only_evens</code> – 25 Points</h2>
 <p>This is the first function you will write in <code>utils.py</code>. The other two functions will also be defined in this file.</p>
-<p>Given a <code>list</code> of <code>ints</code>, <code>only_evens</code> should return a <code>list</code> containing only the elements of the input list that were even. Example usage:</p>
+<p>Given a <code>list</code> of <code>ints</code>, <code>only_evens</code> should return a new <code>list</code> containing only the elements of the input list that were even. The <code>only_evens</code> function must not modify the list it is given a reference to as a parameter. Example usage:</p>
 <pre class="plaintext"><code>&gt;&gt;&gt; only_evens([1, 2, 3])
 [2]
 &gt;&gt;&gt; only_evens([1, 5, 3])
@@ -124,14 +124,14 @@ from utils import concat</code></pre>
 <li>Returns: A list of integers, containing only the even elements of the input parameter.</li>
 </ol>
 <h2 id="concat-25-points">2. <code>concat</code> – 25 Points</h2>
-<p>In this exercise you will write a function named <code>concat</code>. Given two <code>Lists</code> of <code>ints</code>, <code>concat</code> should generate a new List which contains all of the elements of the first list followed by all of the elements of the second list.</p>
+<p>In this exercise you will write a function named <code>concat</code>. Given two <code>Lists</code> of <code>ints</code>, <code>concat</code> should generate a new List which contains all of the elements of the first list followed by all of the elements of the second list. Your <code>concat</code> function may not mutate (“modify”) either of its list parameters.</p>
 <p>Define your function with the following signature.</p>
 <ol type="1">
 <li>Name: <code>concat</code></li>
 <li>Parameters: Two lists of ints.</li>
 <li>Returns: A <code>list</code> containing all elements of the first list, followed by all elements of the second list.</li>
 </ol>
-<p><code>concat</code> <em>should NOT</em> mutate (modify) either of the arguments passed to it.</p>
+<p><code>concat</code> <em>must NOT</em> mutate (modify) either of the arguments passed to it.</p>
 <h2 id="sub-30-points">2. <code>sub</code> – 30 Points</h2>
 <p>In this exercise you will write a function named <code>sub</code>. Given a <code>list</code> of <code>ints</code>, a start index, and an end index (not inclusive), <code>sub</code> should generate a List which is a subset of the given list, between the specified start index and the end index - 1. This function should <em>not mutate</em> its input list.</p>
 <p>Example usage:</p>
