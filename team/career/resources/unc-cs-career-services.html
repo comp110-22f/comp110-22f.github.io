@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> All Experiences - COMP110 - 22F</title>
+    <title> UNC Computer Science Career Services - COMP110 - 22F</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1663612919.7971807">
+    <link rel="stylesheet" href="/static/styles.css?v=1663612920.6522756">
 </head>
 
 <body id="body" class="absolute-page container">
@@ -55,39 +55,46 @@
       </div>
     </nav>
 
-    <div id="home-page" class="container">
+    <div id="resource-page" class="container">
         <div class="row pt-4">
             <div class="col-12">
-            <h2 >All Experiences</h2>
+            <h2 >UNC Computer Science Career Services</h2>
             <hr class="title"/>
         </div>
-    <div class="container">
-                <div class="content"><div style="display: flex;">
-<div class="career-nav">
-<a href="/team/career/index.html">Career110 Home</a>
-</div>
-<div class="career-nav">
-<a href="/team/career/airtable">About</a>
-</div>
-<div class="career-nav">
-<a href="/team/career/airtable/all-experiences.html">All Experiences</a>
-</div>
-<div class="career-nav">
-<a href="/team/career/airtable/contactable-experiences.html">Contactable Experiences</a>
-</div>
-<div class="career-nav">
-<a href="/team/career/airtable/companies.html">Companies &amp; Institutions</a>
-</div>
-<div class="career-nav">
-<a href="/team/career/airtable/contribute.html">Contribute</a>
-</div>
-</div>
-<hr />
-<p>This view contains all experiences people have had with companies or institutions. If someone is willing to be contacted about an experience, there will be a green check mark in the ‘Contact Me!’ column, and the same entry will appear in the ‘Contactable Experiences’ view along with contact information. To view this data in a separate window, select ‘View larger version’ at the bottom of the data frame.</p>
-<iframe className="airtable-embed" id="airtable-frame" src="https://airtable.com/embed/shrTZxFkB3MgMPTCg?backgroundColor=purple&amp;viewControls=on" frameBorder="0" width="100%" height="600">
-</iframe>
-</div>
+    <script src="/static/scripts/toggle-handler.js"></script>
+    
+    <div class="row px-4">
+        <div id="box" class="toc col-xl-3 col-lg-3 order-1 order-lg-2" role="doc-toc">
+            <div id="menu-overview" class="link-page box">
+                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
+                <div id="overview-links">
+                    <div id="TOC" role="doc-toc">
+                        <ul class="overview-item"><ul>
+<li><a href="#how-to-make-an-appointment">How to Make An Appointment</a></li>
+<li><a href="#appointment-types">Appointment Types</a></li>
+</ul>
+</</ul>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><p>UNC Computer Science Career Services provides help with all things CS related whether it’s career advice or interview prep. The Career Services Assistants are upperclassmen Computer Science students, so this is a great way to gain insights and advice about UNC CS and beyond. Currently, all appointments are conducted virtually - all you need to do is make an appointment on Handshake.</p>
+<p>We are lucky to have these resources at our disposal so take <strong>advantage of it.</strong> Especially for interview preparation, getting pratice and feedback through the mock interviews is super valuable.</p>
+<h2 id="how-to-make-an-appointment">How to Make An Appointment</h2>
+<p>Go to Handshake’s homepage -&gt; ‘Career Center’ -&gt; ‘Appointments’ -&gt; ‘Schedule A New Appointment’ -&gt; ‘Computer Science’</p>
+<p>OR directly navigate <a href="https://unc.joinhandshake.com/stu/appointments/new" target="_blank">HERE</a></p>
+<h2 id="appointment-types">Appointment Types</h2>
+<ul>
+<li><p>General Career Advising</p></li>
+<li><p>Resume or Linkedin Review</p></li>
+<li><p>Behavioral Mock Interview</p></li>
+<li><p>Techincal Mock Interview (Beginner or Intermediate)</p></li>
+</ul>
+</div>
+
+       
+
+    </div> 
     </div>
 
     </div>
@@ -96,7 +103,7 @@
 
 
     <div class="authors-box bg-light mt-4 py-3 ps-4">
-      <span> Contributor(s):              Maddie Huber, Ezri White</span>
+      <span> Contributor(s): Meghan Sun</span>
     </div>       
   </div>
 
@@ -122,15 +129,15 @@
 
     <!-- Load our React components. -->
 
-    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1663612919.7971807"></script>
-    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1663612919.7971807"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1663612919.7971807"></script>
-        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1663612919.7971807"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1663612919.7971807"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1663612919.7971807"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1663612919.7971807"></script>
-    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1663612919.7971807"></script>
-    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1663612919.7971807"></script>
+    <script type="text/babel" src="/static/components//Itinerary/EventSection.tsx?cache=1663612920.6522756"></script>
+    <script type="text/babel" src="/static/components//Itinerary/DateSection.tsx?cache=1663612920.6522756"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dates.tsx?cache=1663612920.6522756"></script>
+        <script type="text/babel" src="/static/components//Itinerary/DropdownButton.tsx?cache=1663612920.6522756"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Dropdown.tsx?cache=1663612920.6522756"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Search.tsx?cache=1663612920.6522756"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButtons.tsx?cache=1663612920.6522756"></script>
+    <script type="text/babel" src="/static/components//Itinerary/PillButton.tsx?cache=1663612920.6522756"></script>
+    <script type="text/babel" src="/static/components//Itinerary/Itinerary.jsx?cache=1663612920.6522756"></script>
     <script src="/static/scripts/log-in-handler.js"></script>
 
     
