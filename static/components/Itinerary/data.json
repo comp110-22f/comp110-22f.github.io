@@ -372,9 +372,9 @@
         {
             "kind": "EX",
             "n": 5,
-            "title": "list Utils + Unit Tests (Due Monday 9/26)",
+            "title": "list Utils + Unit Tests (Due Wednesday 9/28)",
             "date": "2022-09-20",
-            "deadline": "2022-09-26",
+            "deadline": "2022-09-28",
             "links": {
                 "": "/exercises/ex05.html"
             }
