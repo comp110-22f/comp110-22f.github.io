@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1664301900.805059">
+    <link rel="stylesheet" href="/static/styles.css?v=1664303059.8566532">
 </head>
 <body>
 
@@ -102,11 +102,11 @@
 <p>Include descriptive function names and docstrings, so that it captures what is being tested.</p>
 <p>The command to run your tests is <code>python -m pytest exercises/ex05</code> or you can run them using the beaker tab in VSCode if it is working (do note the VSCode testing feature tends to be a bit flaky).</p>
 <p>Once you’re ready to import and begin testing your skeletons, you can add the following import lines, corresponding to the functions you have completed, to do so:</p>
-<pre class="plaintext"><code>from utils import only_evens
-from utils import sub
-from utils import concat</code></pre>
+<pre class="plaintext"><code>from exercises.ex05.utils import only_evens
+from exercises.ex05.utils import sub
+from exercises.ex05.utils import concat</code></pre>
 <p>Once you have completed all functions, you can reduce the three import lines down into a single one for less redundancy in your testing code:</p>
-<pre class="plaintext"><code>from utils import only_evens, sub, concat</code></pre>
+<pre class="plaintext"><code>from exercises.ex05.utils import only_evens, sub, concat</code></pre>
 <p>If your screen is large enough, you are encouraged to open these files side-by-side in VSCode by dragging the tab of one to the right side of VSCode so that it changes to a split pane view. Closing your file explorer can help give you additional horizontal space.</p>
 <h2 id="only_evens-25-points">1. <code>only_evens</code> – 25 Points</h2>
 <p>This is the first function you will write in <code>utils.py</code>. The other two functions will also be defined in this file.</p>
