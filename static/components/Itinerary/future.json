@@ -1,55 +1,4 @@
 {
-    "2022-09-19": [],
-    "2022-09-20": [
-        {
-            "kind": "LS",
-            "n": 15,
-            "title": "Importing modules & functions",
-            "date": "2022-09-20",
-            "deadline": "2022-09-20",
-            "links": {
-                "": "https://www.youtube.com/watch?v=uTc39ZXStP0"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 16,
-            "title": "Unit Testing",
-            "date": "2022-09-20",
-            "deadline": "2022-09-20",
-            "links": {
-                "": "https://www.youtube.com/watch?v=VAdJybtia-4"
-            }
-        },
-        {
-            "kind": "EX",
-            "n": 5,
-            "title": "list Utils + Unit Tests (Due Wednesday 9/28)",
-            "date": "2022-09-20",
-            "deadline": "2022-09-28",
-            "links": {
-                "": "/exercises/ex05.html"
-            }
-        }
-    ],
-    "2022-09-21": [],
-    "2022-09-22": [
-        {
-            "kind": "QZ",
-            "n": 1,
-            "title": "Quiz 1",
-            "date": "2022-09-22",
-            "deadline": "2022-09-22",
-            "links": {
-                "Covers through LS14 (Does NOT cover LS15/16!)": "",
-                "Practice Problems": "/resources/practice/fa22/quiz1-worksheet.html",
-                "Tutoring - Tue/Wed - 4pm to 7pm": "https://course.care",
-                "Review Session - Recording": "https://unc.zoom.us/rec/share/Lxe1rknKvL0Ev1P77TD9aJDZZp30Up0h5RXWxVF3X9CcyUd8xD35IX_mdIge2Peu.1b3_NppEtirKVXZB"
-            }
-        }
-    ],
-    "2022-09-23": [],
-    "2022-09-24": [],
     "2022-09-25": [],
     "2022-09-26": [],
     "2022-09-27": [
@@ -80,7 +29,7 @@
             "date": "2022-09-27",
             "deadline": "2022-10-03",
             "links": {
-                "Write-up Coming Soon": ""
+                "": "/exercises/ex06.html"
             }
         }
     ],
