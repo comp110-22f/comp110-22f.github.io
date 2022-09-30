@@ -424,9 +424,9 @@
         {
             "kind": "EX",
             "n": 6,
-            "title": "Choose Your Own Adventure (Due Monday 10/3)",
+            "title": "Choose Your Own Adventure (Due Wednesday 10/5)",
             "date": "2022-09-27",
-            "deadline": "2022-10-03",
+            "deadline": "2022-10-05",
             "links": {
                 "": "/exercises/ex06.html"
             }

@@ -1,36 +1,4 @@
 {
-    "2022-09-27": [
-        {
-            "kind": "LS",
-            "n": 17,
-            "title": "Scopes, Globals, and Constants",
-            "date": "2022-09-27",
-            "deadline": "2022-09-27",
-            "links": {
-                "": "/lessons/scopes-constants-globals.html"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 18,
-            "title": "for..in Loops",
-            "date": "2022-09-27",
-            "deadline": "2022-09-27",
-            "links": {
-                "": "https://www.youtube.com/watch?v=YPfFCD_RGK8"
-            }
-        },
-        {
-            "kind": "EX",
-            "n": 6,
-            "title": "Choose Your Own Adventure (Due Monday 10/3)",
-            "date": "2022-09-27",
-            "deadline": "2022-10-03",
-            "links": {
-                "": "/exercises/ex06.html"
-            }
-        }
-    ],
     "2022-09-28": [],
     "2022-09-29": [
         {
