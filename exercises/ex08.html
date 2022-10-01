@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EX08 - Analysis for Continuous Improvement - COMP110 - 22F</title>
+    <title> EX08 - Data Wrangling - COMP110 - 22F</title>
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1660613425.7223155">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/styles.css?v=1664652466.699176">
 </head>
 <body>
 
@@ -31,6 +30,9 @@
               <a class="nav-link " href="/">agenda</a>
             </li>
             <li class="nav-item">
+              <a href="/lessons-page" class="nav-link">lessons</a>
+            </li>
+            <li class="nav-item">
               <a href="/resources" class="nav-link">resources</a>
             </li>
             <li class="nav-item">
@@ -42,14 +44,17 @@
             <li class="nav-item">
               <a href="https://course.care/courses" class="nav-link">course.care</a>
             </li>
+            <li class="nav-item">
+                  <a href="/resources/team.html" class="nav-link">team110</a>
+            </li>
           </ul>
         </div>
       </div>
   </nav>
-  <div id="projects-page" class="container">
+  <div id="exercises-page" class="container">
     <div class="row pt-4">
         <div class="col-12">
-            <h2 >EX08 - Analysis for Continuous Improvement</h2>
+            <h2 >EX08 - Data Wrangling</h2>
             <hr class="title"/>
         </div>
     </div>
@@ -62,142 +67,65 @@
                 <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
                 <div id="overview-links">
                     <div id="TOC" role="doc-toc">
-                        <ul class="overview-item">doc-toc">
-<ul>
+                        <ul class="overview-item"><ul>
 <li><a href="#overview">Overview</a></li>
-<li><a href="#rubric">Rubric</a></li>
-<li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#tour-of-the-data">Tour of the Data</a></li>
-<li><a href="#some-notes-before-you-begin">Some notes before you begin</a></li>
-<li><a href="#some-notes-if-you-are-on-a-m1-mac">Some notes if you are on a M1 Mac!</a></li>
-<li><a href="#submission-instructions">Submission Instructions</a></li>
+<li><a href="#pull-the-skeleton-code">0. Pull the skeleton code</a></li>
+<li><a href="#starter-files">1. Starter Files</a></li>
+<li><a href="#autograding">Autograding</a></li>
 </ul>
 </</ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h3 id="overview">Overview</h3>
-<p>Courses such as COMP110, just like organizations, services, and products, can be improved through intentional iteration on their design in order to <em>create more value</em> for its stakeholders. This practice is generally known as <em>continuous improvement</em>.</p>
-<p>What is <em>creating value</em>? This idea can manifest in many ways, such as: serving unmet needs, reframing problems as opportunities, identifying authentic demand, testing novel ideas, leveraging underutilized resources, extending existing solutions, and so on.</p>
-<p>In a course, the stakeholders are typically:</p>
+        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h2 id="overview">Overview</h2>
+<p>In Exercise 08, you will write some additional utility functions for <em>wrangling</em> data from a raw CSV data file into representations more conducive for computing. In the process, you will gain experience and comfort working with <code>dict</code> and <code>list</code> data structures.</p>
+<p>In order to complete this exercise, you <strong>must</strong> watch and follow along with Tuesday’s lecture, where we provide you with the code for several of the necessary functions to complete this assignment.</p>
+<p>In this exercise, you will move through a very common first set of steps when working with a new data set:</p>
 <ol type="1">
-<li>Students Enrolled</li>
-<li>Instructional Staff</li>
-<li>Academic Institution</li>
-<li>Societal Workforce</li>
+<li>Read the data</li>
+<li>Transform it to be in a “shape” that is easier to work with</li>
+<li>Preview and select just the parts of the dataset you are interested in</li>
+<li>Run (simple, in this notebook) analyses</li>
 </ol>
-<p>In this open-ended exercise, you will reflect on your personal experiences and observations in COMP110 and brainstorm modifications to the course that <em>create value</em> beyond its current design.</p>
-<p>From your brainstormed ideas, you will consider them in the context of the anonymized course survey data submitted by you and your peers earlier in the semester. You will identify which one of your ideas <em>does not</em> or is <em>least likely</em> to have data to support or refute your idea and suggest how we might collect that data in the future. Then you will identify which one of your ideas <em>does have</em> data to analyze and carry out an analysis of your most promising idea.</p>
-<p>Your will then perform an analysis of the data to explore the degree to which the data supports your idea. It is OK and expected that many ideas will not have conclusive support in the data and may even be rejected by the data. This is OK!</p>
-<p>Your project will need to satisfy many specifications, so before you begin programming be sure to read this project’s write-up and the provided template notebook in full.</p>
-<h2 id="rubric">Rubric</h2>
-<p>Part 1. Creative Ideation (15pts)</p>
+<p>The sample data set provided alongside this exercise is police stop data from Durham, as compiled by the <a href="https://openpolicing.stanford.edu/data/">Stanford Open Policing Project</a>.</p>
+<p>There are two files you will be working in: <code>data_utils.py</code> and <code>data_wrangling.ipynb</code>. The first is where you will be writing your function definitions. You should copy over your functions from the lesson on CSV file reading into this file. The Jupyter notebook will guide you through the exercise and lead you through a simple analysis. All you need to do here is run the cells. You will get some baseline credit just for running them and moving through the steps as instructed.</p>
+<p>Assignment Outline</p>
 <ul>
-<li>Good - 5 pts - One brainstormed idea identifies value created for a specific stakeholder group.</li>
-<li>Better - 10 pts - Three brainstormed ideas which each identify value created for a specific stakeholder group.</li>
-<li>Best - 15 pts - Five brainstormed ideas which each identify value created for a specific stakeholder group.</li>
+<li><p><code>head</code> – 30 Points Autograded</p></li>
+<li><p><code>select</code> – 25 Points Autograded</p></li>
+<li><p><code>concat</code> – 15 Points Autograded</p></li>
+<li><p>Did you run the notebook cells and save the values of outputs before submission? – 10 Points Handgraded</p></li>
+<li><p>Style, Linting, Typing – 20 Points Autograded</p></li>
 </ul>
-<p>Part 2. Identifying Missing Data (10pts)</p>
-<ul>
-<li>Good - 5 pts - Identifies an idea that does not have applicable data to support or is unlikely to have enough data to support.</li>
-<li>Better - 10 pts - Additionally is able to suggest a plausible and realistic way to collect data to support the idea in the future.</li>
-</ul>
-<p>Part 3. Choosing Your Analysis (10pts)</p>
-<ul>
-<li>Good - 5 pts - Chooses an idea that has data from the survey which could be analyzed in support of it.</li>
-<li>Better - 10 pts - Articulates reason for choosing this idea to analyze over others based on its potential to create value.</li>
-</ul>
-<p>Part 4. Analysis (50pts) - Each rubric item is independent of the others.</p>
-<ul>
-<li>5pts - Each code cell in your analysis is preceded by a markdown cell explaining what you are attempting to do. Walk us through your thought process.</li>
-<li>5pts - The code cells are executed and the notebook has saved outputs of code cells submitted.</li>
-<li>5pts - Import and make use of <code>read_csv_rows</code> function</li>
-<li>5pts - Import and make use of <code>head</code> function</li>
-<li>5pts - Import and make use of <code>columnar</code> function</li>
-<li>5pts - Import and make use of <code>select</code> function</li>
-<li>5pts - Import and make use of <code>count</code> function</li>
-<li>5pts - Define and use at least one helper function of your own design. One idea is a function that filters some data based on some criteria. For example, all values in a column that are greater than some threshold.</li>
-<li>5pts - Carries out a logical analysis given the stated idea being analyzed.</li>
-<li>5pts - Produces a chart or visualization of the relevant data being analyzed.</li>
-</ul>
-<p>Part 5. Conclusion (15pts)</p>
-<ul>
-<li>Good - 5 pts - Summarizes findings of analysis and the degree to which it supports, refutes, or is inconclusive regarding the idea put forth.</li>
-<li>Better - 10 pts - Puts forth potential costs, downsides, or trade-offs of adopting the idea.</li>
-<li>Best - 15 pts - Identifies extensions or refinements to this idea to consider as future work.</li>
-</ul>
-<p>These are just the baseline requirements. In order to completely analyze the idea you choose to explore, more intermediate steps may be necessary!</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>You will get the data needed by “pulling” from the course workspace repository. Steps to do this:</p>
+<p>This means anything in the notebook that is not included in this outline was either provided to you in one of the earlier videos or is optional!</p>
+<h2 id="pull-the-skeleton-code">0. Pull the skeleton code</h2>
+<p>You will find the starter files needed by “pulling” from the course workspace repository. Before beginning, be sure to:</p>
 <ol start="0" type="1">
 <li>Be sure you are in your course workspace. Open the file explorer and you should see your work for the course. If you do not, open your course workspace through File &gt; Open Recent.</li>
 <li>Open the <em>Source Control View</em> by clicking the 3-node (circles) graph (connected by lines) icon in your sidebar or opening the command palatte and searching for <em>Source Control</em>.</li>
-<li>Click the Ellipses in the Source Control pane and select “Pull, Push” from the drop-down menu, then select “Pull from…” A box will appear and you should select either “origin” or “upstream”, but not “backup”. This will begin the pulling process from the course repository. It should silently succeed. (If you are on macOS and do not see anything in source control anymore, it may be because of a macOS update. You can typically resolve this by opening a new Terminal, typing the command <code>xcode-select --install</code>, pressing enter and following its instructions. You will also need to restart VSCode after doing this.)</li>
-<li>Return to the File Explorer pane and open the <code>data</code> directory. You should see it now contains the csv file with the survey results called <code>survey.csv</code>.</li>
-<li>In your workspace’s <code>exercises</code> directory, you will see a folder named <code>ex08</code>. Inside that folder, there is a file named <code>analysis.ipynb</code> for this assignment.</li>
-<li>Additionally, create another file <code>data_utils.py</code> and copy in your functions from the previous exercise’s file with the same name!</li>
+<li>Click the Ellipses in the Source Control pane and select “Pull” from the drop-down menu. This will begin the pulling process from the course repository. It should silently succeed.</li>
+<li>Return to the File Explorer pane and open the <code>exercises</code> directory. You should see it now contains another directory named <code>ex08</code>. If you expand that directory, you should see the starter file for the three functions you’ll be writing.</li>
+<li>If you do not see the <code>ex08</code> directory, try once more but selecting <code>"Pull From"</code> and select <code>origin</code> in step 2. If you expand that directory, you will see the starter files: <code>data_utils.py</code> and <code>data_wrangling.ipynb</code>. Additionally, you will see a CSV file in the <code>data/</code> directory with the sample traffic stops from one week in Durham in 2015.</li>
 </ol>
-<h2 id="tour-of-the-data">Tour of the Data</h2>
-<p><code>row</code> – Row number. Unique for each row of the CSV.</p>
-<p><code>year</code> – Expected graduation year. Possible values: 21, 22, 23, 24, 25. (Note: This is clearly a non-exhaustive list. Just simplified for the sake of the project)</p>
-<p><code>unc_status</code> – UNC status. Possible values: Returning UNC Student, Incoming Transfer Student, Incoming First-year Student</p>
-<p><code>comp_major</code> – Intention to major in CS. Possible values: Yes - BS, Yes - BA, Yes - Minor, No.</p>
-<p><code>primary_major</code> – Primary Major. Possible values: Advertising and PR, Asian Studies, Biology, Business, Chemistry, Clinical Lab Science, Communication, Communications, Computer Science, Cultural Anthropology, Earth Science, Economics, English, Environmental Science/Studies, Exercise and Sports Science, Geology, HPM, Information Science, Interdisciplinary Studies, Linguistics, Mathematics, Media and Journalism, Medical Anthropology, Music Preformance, Neuroscience, Nursing, Nutrition, Peace, War, and Defense, Philosophy, Physics, Political Science, Psychology, Radiology, Sports Administration, Statistics and Analytics, Studio Art, Undecided</p>
-<p><code>prereqs</code> – Prerequisites satisfied. Possible values are <strong>any combination</strong> of the following: MATH 129P, MATH 130, MATH 152, MATH 210, MATH 231, MATH 232, MATH 233, MATH 347, MATH 381, PHIL 155, PSYC 210, PSYC 215, STOR 112, STOR 113, STOR 120, STOR 151, STOR 155</p>
-<p><code>prior_exp</code> – Prior experience. Possible values: None to less than one month!, 2-6 months, 7-12 months, 1-2 years, Over 2 years</p>
-<p><code>ap_principles</code> – Completed AP Computer Science Principles. Possible values: Yes, No</p>
-<p><code>ap_a</code> – Completed AP Computer Science A. Possible values: Yes, No</p>
-<p><code>other_comp</code> – Completed a different, formal programming class. Possible values: UNC, Another college or community college, High school course (IB or other), On-line course, Other, None</p>
-<p><code>prior_time</code> – Amount of time spent self-directed programming learning. Possible values: None to less than one month!, 1 month or so, 2-6 months, 7-12 months, 1-2 years, &gt; 2 years</p>
-<p><code>languages</code> – Programming languages student can identify by reading w/o reference material. Possible values are <strong>any combination</strong> of the following: Python, Java / C#, C / C++, JavaScript / TypeScript, Go, LISP / Scheme / Racket, Haskell, R / Matlab / SAS, BASIC, HTML / CSS, SQL, Bash, Other</p>
-<p><code>hours_online_social</code> – Number of hours a day spent interacting with digital technology for personal uses (e.g. social media, entertainment, personal communication)? Possible values: None, 0 to 2 hours, 3 to 5 hours, 5 to 10 hours, 10+ hours.</p>
-<p><code>hours_online_work</code> – Number of hours a day spent interacting with digital technology for work/school uses. Possible values: Possible values: None, 0 to 2 hours, 3 to 5 hours, 5 to 10 hours, 10+ hours.</p>
-<p><code>lesson_time</code> – Student completes each lecture’s lessons during the hours of the day registered for the course. In other words, if in Section 1, lessons are completed between 9:30pm-10:45am on Tu/Th, and if in Section 2, lessons are completed during class time. Possible values <em>(1 being Never and 7 being Always)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>sync_perf</code> – Student’s performance in this course would improve if every lecture were synchronous with required attendance during the regularly scheduled meeting time. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>all_sync</code> – Student would prefer this course to require every lecture be synchronous with required attendance during the regularly scheduled meeting time. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>flipped_class</code> – If Tuesdays also became required in-person synchronous days, student would be willing to watch videos and complete lessons as homework over the weekend and Mondays to prepare for Tuesday lectures. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>no_hybrid</code> – Moving forward in the semester, student believes in-person lectures should not be live streamed so that everyone is required to attend in-person. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>own_notes</code> – Student keeps own notes for topics covered in lecture. Possible values <em>(1 being Never and 7 being Always)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>own_examples</code> – When uncertain of how a concept works, student tries to come up with own examples in code. Possible values <em>(1 being Never and 7 being Always)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>oh_visits</code> – On average, for a single programming exercise or project in this course, student typically needs to seek help in office hours about this many times. Possible values <em>(0 being Zero and 5 being Five or More)</em>: 0, 1, 2, 3, 4, 5</p>
-<p><code>ls_effective</code> – Lesson videos are effective in helping student learn the topics of the course. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>lsqs_effective</code> – Post-lesson questions on Gradescope are effective in helping student learn the topics of the course. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>programming_effective</code> – Programming assignments are effective in helping student learn the topics of the course. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>qz_effective</code> – Preparing for quizzes is effective in helping student learn the topics of the course. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>oh_effective</code> – Office hours 1:1 appointments are effective in helping student learn the topics of the course. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree, Empty string if student has not attended OH)</em>: 1, 2, 3, 4, 5, 6, 7, ""</p>
-<p><code>tutoring_effective</code> – Tutoring is effective in helping student learn the topics of the course. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree, Empty string if student has not attended tutoring)</em>: 1, 2, 3, 4, 5, 6, 7, ""</p>
-<p><code>pace</code> – Student finds the pace of COMP110 to be moving… Possible values <em>(1 being Very Slowly and 7 being Very Quickly)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>difficulty</code> – Student is finding COMP110 to be… Possible values <em>(1 being Very Easy and 7 being Very Difficult)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>understanding</code> – So far, student is feeling like they typically… Possible values <em>(1 being Are Lost and 7 being Understand Everything)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>interesting</code> – Student believes the topics they are learning in this course are intellectually interesting. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>valuable</code> – Student believes the skills they are learning in this course will be valuable to them in the future. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<p><code>would_recommend</code> – Student would recommend this course to other students in the Fall. Possible values <em>(1 being Strongly Disagree and 7 being Strongly Agree)</em>: 1, 2, 3, 4, 5, 6, 7</p>
-<h2 id="some-notes-before-you-begin">Some notes before you begin</h2>
-<ul>
-<li>Some of the survey questions were optional, so there will not be a data value for every column in every row. This is expected. Instead the value will just be the empty <code>str</code> or <code>""</code>.</li>
-<li>When you read in the CSV as a <code>list[dict[str, str]]</code> with your <code>read_csv_rows</code> function, every value is interpreted as a <code>str</code>, including numerical ones! Analysis on columns that include likert data (ratings 1-7), for example, will need to be converted to a numeric type for numeric analysis.</li>
-</ul>
-<h2 id="some-notes-if-you-are-on-a-m1-mac">Some notes if you are on a M1 Mac!</h2>
-<p>If you have the new M1 Macbook, the Seaborn plotting package is not yet supported. An alternative is using Matplotlib, and an example is provided below. Feel free to use Google and any online resources to customize your plot to your liking!</p>
-<pre><code>import matplotlib.pyplot as plt
-import numpy as np
-import matplotlib.pyplot as plt
-
-labels = [&#39;Python&#39;, &#39;C++&#39;, &#39;Java&#39;, &#39;Perl&#39;, &#39;Scala&#39;, &#39;Lisp&#39;]
-y_pos = [0, 1, 2, 3, 4, 5]  # the order the labels will be arranged in bar chart
-performance = [10,8,6,4,2,1]
-
-plt.bar(y_pos, performance, align=&#39;center&#39;, alpha=0.5)
-plt.xticks(y_pos, labels)
-plt.ylabel(&#39;Usage&#39;)
-plt.title(&#39;Programming language usage&#39;)
-
-plt.show()</code></pre>
-<h2 id="submission-instructions">Submission Instructions</h2>
-<p>Save your notebook!</p>
-<p>Then run <code>python -m tools.submission exercises/ex08</code> to build your submission zip for upload to Gradescope. Don’t forget to backup your work by creating a commit and pushing it to GitHub. For a reminder of this process, see the previous exercises.</p>
-<p>All of the points for this project will be handgraded, so your autograder score should be 0/0. This blank screen is expected!</p>
+<h2 id="starter-files">1. Starter Files</h2>
+<p>Note, this exercise makes use of functions that were first introduced in the lesson on CSV file Reading. You will use files defined in <code>data_utils.py</code> from that lesson and additional functions to it in this exercise.</p>
+<p>Your work in this exercise will be completed across two files:</p>
+<ol type="1">
+<li><p><code>data_utils.py</code> - This is the Python module where you will implement utility functions for working with data.</p></li>
+<li><p><code>data_wrangling.ipynb</code> - This is the Jupyter Notebook file that makes use of the utility functions</p></li>
+</ol>
+<p>The descriptions of the functions you will need to implement, as well as example code that makes use of those functions once they are correctly implemented, can be found in the <code>data_wrangling.ipynb</code> file.</p>
+<p>If your screen is large enough, you are encouraged to open these files side-by-side in VSCode by dragging the tab of one to the right side of VSCode so that it changes to a split pane view. Closing your file explorer can help give you additional horizontal space.</p>
+<p><strong>Be sure to save your work in <code>data_utils.py</code> before reevaluating cells in <code>data_wrangling.ipynb</code>.</strong></p>
+<h2 id="autograding">Autograding</h2>
+<p><strong>BEFORE SUBMITTING YOUR ASSIGNMENT FOR SUBMISSION, BE SURE TO SAVE YOUR WORK IN YOUR JUPYTER NOTEBOOK!!!</strong> After submission, view the files of your submission to be sure your notebook’s cells’ output is visible in the submission on Gradescope. If not, save your notebook and resubmit.</p>
+<p>Login to Gradescope and select the assignment named “EX08 - Data Wrangling”. You’ll see an area to upload a zip file. To produce a zip file for autograding, return back to Visual Studio Code.</p>
+<p>If you <em>do not</em> see a Terminal at the bottom of your screen, open the Command Palette and search for “View: Toggle Integrated Terminal”.</p>
+<p>To produce a zip file for <code>ex08</code>, type the following command (all on a single line):</p>
+<p><code>python -m tools.submission exercises/ex08</code></p>
+<p>In the file explorer pane, look to find the zip file named “yy.mm.dd-hh.mm-exercises-ex08.zip”. The “mm”, “dd”, and so on, are timestamps with the current year, month, day, hour, minute. If you right click on this file and select “Reveal in File Explorer” on Windows or “Reveal in Finder” on Mac, the zip file’s location on your computer will open. Upload this file to Gradescope to submit your work for this exercise.</p>
+<p>Autograding will take a few moments to complete. For this exercise there will be points manually graded for style – using meaningful variable names and snake_case. If there are issues reported, you are encouraged to try and resolve them and resubmit. If for any reason you aren’t receiving full credit and aren’t sure what to try next, come give us a visit in office hours!</p>
 </div>
 
        
@@ -205,7 +133,7 @@ plt.show()</code></pre>
     </div> 
 
     <div class="authors-box bg-light mt-4 py-3 ps-4">
-      <span> Contributor(s):              Kris Jordan,              Kaki Ryan, Izzy Ford</span>
+      <span> Contributor(s):              Kaki Ryan,              Izzy Ford, Kris Jordan</span>
     </div>       
   </div>
   <div class='link-page mt-3 container'>
