@@ -432,5 +432,32 @@
             }
         }
     ],
-    "2022-09-28": []
+    "2022-09-28": [],
+    "2022-09-29": [
+        {
+            "kind": "CL",
+            "n": 4,
+            "title": "Sync In-person: Practice with Scope / for..in, Introducing Sequences",
+            "date": "2022-09-29",
+            "deadline": "None",
+            "links": {
+                "Recording": "https://youtu.be/YF1l1M5o72M",
+                "Slides": "/static/slides/cl04-scope-sequences.pdf"
+            }
+        },
+        {
+            "kind": "RD",
+            "n": 1,
+            "title": "Reading: Weapons of Math Destruction (Due Friday 10/28)",
+            "date": "2022-09-29",
+            "deadline": "2022-10-28",
+            "links": {
+                "": "https://gradescope.com"
+            }
+        }
+    ],
+    "2022-09-30": [],
+    "2022-10-01": [],
+    "2022-10-02": [],
+    "2022-10-03": []
 }

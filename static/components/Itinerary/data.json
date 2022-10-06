@@ -491,7 +491,8 @@
             "date": "2022-10-06",
             "deadline": "None",
             "links": {
-                "": "https://youtu.be/Mxbohhxh1PE"
+                "Slides": "/static/slides/cl05-dictionaries-practice.pdf",
+                "Recording": "https://youtu.be/Mxbohhxh1PE"
             }
         }
     ],
