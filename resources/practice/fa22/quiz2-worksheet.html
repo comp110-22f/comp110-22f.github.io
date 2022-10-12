@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1665413302.6622531">
+    <link rel="stylesheet" href="/static/styles.css?v=1665595454.3659654">
 </head>
 <body>
 
@@ -73,12 +73,14 @@
 <li><a href="#conceptual-questions">Conceptual Questions</a></li>
 <li><a href="#memory-diagrams">Memory Diagrams</a></li>
 <li><a href="#code-tracing">Code Tracing</a></li>
+<li><a href="#function-writing">Function Writing</a></li>
 </ul></li>
 <li><a href="#solutions">Solutions</a>
 <ul>
 <li><a href="#conceptual-questions-1">Conceptual Questions</a></li>
 <li><a href="#memory-diagrams-1">Memory Diagrams</a></li>
 <li><a href="#code-tracing-1">Code Tracing</a></li>
+<li><a href="#function-writing-1">Function Writing</a></li>
 </ul></li>
 </ul>
 </</ul>
@@ -91,10 +93,10 @@ Note: this wkst pulls from the qz02 and qz03 worksheets from resources/practice/
 minor changes/additions
 -->
 <h1 id="questions">Questions</h1>
-<p>The quiz itself will be similar in difficulty but longer in length than this practice worksheet.</p>
+<p>The quiz itself will be similar in difficulty to this practice worksheet.</p>
 <p>Solutions for each problem can be found at the bottom of this page.</p>
 <h2 id="conceptual-questions">Conceptual Questions</h2>
-<ol start="7" type="1">
+<ol type="1">
 <li>Global variables are limited to the scope of the function they are declared in. (T/F)</li>
 <li>Variables can have the same name but store different values if they are defined in a different scope. (T/F)</li>
 <li>Named constants should be used to store values that may change throughout the program. (T/F)</li>
@@ -108,7 +110,7 @@ minor changes/additions
 <li>Explain the similarities and differences between Python’s <code>list</code> and <code>dict</code>.</li>
 </ol>
 <h2 id="memory-diagrams">Memory Diagrams</h2>
-<ol start="18" type="1">
+<ol start="12" type="1">
 <li><p>Produce a memory diagram for the following code snippet, being sure to include its stack and output.<br />
 <img src="/static/practice_worksheets/fa21/qz02-question11.png" /></p></li>
 <li><p>Produce a memory diagram for the following code snippet, being sure to include its stack and output.<br />
@@ -117,32 +119,31 @@ minor changes/additions
 <!-- 20. Produce a memory diagram for the following code snippet, being sure to include its stack and output.  
 ![](/static/practice_worksheets/fa21/qz03-question12.png) -->
 <h2 id="code-tracing">Code Tracing</h2>
-<ol start="21" type="1">
+<ol start="14" type="1">
 <li><p>Given the following code snippet, answer the questions below.<br />
 <img src="/static/practice_worksheets/fa21/qz02-question13.png" /><br />
-21.1. What is the printed output once the code snippet completes?<br />
-21.2. What are the values of the global variables <code>a</code>, <code>b</code>, and <code>c</code> once the code snippet completes?</p></li>
+14.1. What is the printed output once the code snippet completes?<br />
+14.2. What are the values of the global variables <code>a</code>, <code>b</code>, and <code>c</code> once the code snippet completes?</p></li>
 <li><p>Given the following code snippet, answer the questions below.<br />
 <img src="/static/practice_worksheets/fa21/qz02-question14.png" /><br />
-22.1. What is the value of <code>list_1</code> once the code snippet completes?<br />
-22.2. What is the value of <code>i</code> on line 13 during the <em>last</em> call to <code>change_and_check</code>?<br />
-22.3. How many total frames are created on the stack throughout the run of this program (including the globals frame)?</p></li>
+15.1. What is the value of <code>list_1</code> once the code snippet completes?<br />
+15.2. What is the value of <code>i</code> on line 13 during the <em>last</em> call to <code>change_and_check</code>?<br />
+15.3. How many total frames are created on the stack throughout the run of this program (including the globals frame)?</p></li>
 </ol>
-<!-- ## Function Writing
-
-23. Write a function called `odd_and_even`. Given a list of `ints`, `odd_and_even` should return a new list containing the elements that are odd and have an even index.  
-Example Usage:  
-![](/static/practice_worksheets/fa21/qz02-question15demo.png)
-
-24. Write a function named `vowels_and_threes`. Given a string, `vowels_and_threes` should return a new string containing the characters that are either at an index that is a multiple of 3 or a vowel (one or the other, not both). You can assume that the input string is all lowercase, for simplicity.  
-Example Usage:  
-![](/static/practice_worksheets/fa21/qz02-question16demo.png)
-
-25. Write a function called `average_grades`. Given a dictionary with `str` keys and `list[int]` values, `average_grades` should return a new dictionary of type `dict[str, float]` that maps each student to their average.  
-![](/static/practice_worksheets/sp22/qz02-solution17.png) -->
+<h2 id="function-writing">Function Writing</h2>
+<ol start="16" type="1">
+<li><p>Write a function called <code>odd_and_even</code>. Given a list of <code>ints</code>, <code>odd_and_even</code> should return a new list containing the elements that are odd and have an even index.<br />
+Example Usage:<br />
+<img src="/static/practice_worksheets/fa21/qz02-question15demo.png" /></p></li>
+<li><p>Write a function named <code>vowels_and_threes</code>. Given a string, <code>vowels_and_threes</code> should return a new string containing the characters that are either at an index that is a multiple of 3 or a vowel (one or the other, not both). You can assume that the input string is all lowercase, for simplicity.<br />
+Example Usage:<br />
+<img src="/static/practice_worksheets/fa21/qz02-question16demo.png" /></p></li>
+<li><p>Write a function called <code>average_grades</code>. Given a dictionary with <code>str</code> keys and <code>list[int]</code> values, <code>average_grades</code> should return a new dictionary of type <code>dict[str, float]</code> that maps each student to their average.<br />
+<img src="/static/practice_worksheets/sp22/qz02-solution17.png" /></p></li>
+</ol>
 <h1 id="solutions">Solutions</h1>
 <h2 id="conceptual-questions-1">Conceptual Questions</h2>
-<ol start="7" type="1">
+<ol type="1">
 <li>False</li>
 <li>True</li>
 <li>False</li>
@@ -161,28 +162,25 @@ Differences:<br />
 Note: these are not all of the similarities and differences, just some important ones to remember</li>
 </ol>
 <h2 id="memory-diagrams-1">Memory Diagrams</h2>
-<ol start="18" type="1">
+<ol start="12" type="1">
 <li><p><img src="/static/practice_worksheets/fa21/qz02-solution11.png" /></p></li>
 <li><p><img src="/static/practice_worksheets/fa21/qz02-solution12n.png" /></p></li>
 </ol>
-<!-- 20.   ![](/static/practice_worksheets/fa21/qz03-solution12.png) -->
 <h2 id="code-tracing-1">Code Tracing</h2>
-<ol start="21" type="1">
-<li><p>21.1. <code>[3, 7, 10, 13]</code><br />
-21.2. a = 3, b = 0, c = 13.5</p></li>
-<li><p>22.1. <code>[6, 7, 5, 3, 0]</code><br />
-22.2. 3<br />
-22.3. 4</p></li>
+<ol start="14" type="1">
+<li><p>14.1. <code>[3, 7, 10, 13]</code><br />
+14.2. a = 3, b = 0, c = 13.5</p></li>
+<li><p>15.1. <code>[6, 7, 5, 3, 0]</code><br />
+15.2. 3<br />
+15.3. 4</p></li>
 </ol>
-<!-- ## Function Writing
-
-Note:  Your solution does not need to be identical to these, these are just two of many possible solutions.
-
-23.  ![](/static/practice_worksheets/fa21/qz02-solution15.png)
-
-24.  ![](/static/practice_worksheets/fa21/qz02-solution16.png)
-
-25.  ![](/static/practice_worksheets/fa21/qz03-solution14.png) -->
+<h2 id="function-writing-1">Function Writing</h2>
+<p>Note: Your solution does not need to be identical to these, these are just two of many possible solutions.</p>
+<ol start="16" type="1">
+<li><p><img src="/static/practice_worksheets/fa21/qz02-solution15.png" /></p></li>
+<li><p><img src="/static/practice_worksheets/fa21/qz02-solution16.png" /></p></li>
+<li><p><img src="/static/practice_worksheets/fa21/qz03-solution14.png" /></p></li>
+</ol>
 </div>
 
        
