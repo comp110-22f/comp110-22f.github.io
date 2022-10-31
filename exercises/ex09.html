@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EX09 - Cluster Funk - COMP110 - 22F</title>
+    <title> EX09 - Contagion Simulation - COMP110 - 22F</title>
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1667221099.5963356">
+    <link rel="stylesheet" href="/static/styles.css?v=1667246272.4600294">
 </head>
 <body>
 
@@ -54,13 +54,62 @@
   <div id="exercises-page" class="container">
     <div class="row pt-4">
         <div class="col-12">
-            <h2 >EX09 - Cluster Funk</h2>
+            <h2 >EX09 - Contagion Simulation</h2>
             <hr class="title"/>
         </div>
     </div>
 
-    <div class="container">
-                <div class="content"><h2 id="overview">Overview</h2>
+    <script src="/static/scripts/toggle-handler.js"></script>
+    
+    <div class="row px-4">
+        <div id="box" class="toc col-xl-3 col-lg-3 order-1 order-lg-2" role="doc-toc">
+            <div id="menu-overview" class="link-page box">
+                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
+                <div id="overview-links">
+                    <div id="TOC" role="doc-toc">
+                        <ul class="overview-item"><ul>
+<li><a href="#overview">Overview</a>
+<ul>
+<li><a href="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+</ul></li>
+<li><a href="#office-hours-expectations">Office Hours Expectations</a></li>
+<li><a href="#part-0-attribution-style-linting-and-types---10pts">Part 0) Attribution, Style Linting, and Types - 10pts</a></li>
+<li><a href="#part-1-infection---30pts">Part 1) Infection - 30pts</a>
+<ul>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#cellcontract_disease"><code>Cell#contract_disease</code></a></li>
+<li><a href="#cellis_vulnerable"><code>Cell#is_vulnerable</code></a></li>
+<li><a href="#cellis_infected"><code>Cell#is_infected</code></a></li>
+<li><a href="#cellcolor"><code>Cell#color</code></a></li>
+<li><a href="#model__init__---number-of-infected-cells"><code>Model#__init__</code> - Number of Infected Cells</a></li>
+</ul></li>
+<li><a href="#part-2-contagion---30-points">Part 2) Contagion - 30 points</a>
+<ul>
+<li><a href="#pointdistance"><code>Point#distance</code></a></li>
+<li><a href="#cellcontact_with"><code>Cell#contact_with</code></a></li>
+<li><a href="#modelcheck_contacts"><code>Model#check_contacts</code></a></li>
+</ul></li>
+<li><a href="#part-3-immunity---20pts">Part 3) Immunity - 20pts</a>
+<ul>
+<li><a href="#constants-1">Constants</a></li>
+<li><a href="#cellimmunize"><code>Cell#immunize</code></a></li>
+<li><a href="#cellis_immune"><code>Cell#is_immune</code></a></li>
+<li><a href="#cellcolor-1"><code>Cell#color</code></a></li>
+<li><a href="#model__init__"><code>Model#__init__</code></a></li>
+<li><a href="#celltick"><code>Cell#tick</code></a></li>
+<li><a href="#modelis_complete"><code>Model#is_complete</code></a></li>
+</ul></li>
+<li><a href="#part-4-style-concerns---5pts">Part 4) Style Concerns - 5pts</a></li>
+<li><a href="#submission-instructions">Submission Instructions</a></li>
+<li><a href="#future-extensions">Future Extensions</a></li>
+</ul>
+</</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h2 id="overview">Overview</h2>
 <p>This exercise is inspired by the <a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">Washington Post’s article that simulated infectiousness</a> with 2D cells in a graphical visualization. Simulations such as this are great sandboxes to practice and learn object-oriented programming concepts such as classes, objects, constructors, and methods.</p>
 <h3 id="learning-objectives">Learning Objectives</h3>
 <ul>
@@ -69,7 +118,7 @@
 <li>Gain comfort modelling more complex data relationships through object graphs</li>
 </ul>
 <h3 id="getting-started">Getting Started</h3>
-<p>This exercise involves support code that was introduced in the lesson for Tuesday, November 1st. If you have not completed that lesson, please do so first before continuing on.</p>
+<p>This exercise involves support code that was introduced in the lesson for Tuesday, November 1st. If you have not completed that lesson, <strong>you will need to do so first before continuing on</strong>. Watch and complete the follow-along exercises of the video to get started here: <a href="https://www.youtube.com/watch?v=hTU2Fr58RO0" class="uri">https://www.youtube.com/watch?v=hTU2Fr58RO0</a></p>
 <p>As a reminder, to begin running your simulation you can run the following command in the terminal:</p>
 <p><code>python -m exercises.ex09</code></p>
 <h2 id="office-hours-expectations">Office Hours Expectations</h2>
@@ -163,7 +212,10 @@
 <li>Look to the Washington Post article for more ideas!</li>
 </ol>
 </div>
-            </div>
+
+       
+
+    </div> 
 
     <div class="authors-box bg-light mt-4 py-3 ps-4">
       <span> Contributor(s): Kris Jordan</span>
