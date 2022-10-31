@@ -633,9 +633,9 @@
         {
             "kind": "EX",
             "n": 9,
-            "title": "Contagion Simulation (Due Monday 11/7)",
+            "title": "Contagion Simulation (Due Tuesday 11/8)",
             "date": "2022-11-01",
-            "deadline": "2022-11-07",
+            "deadline": "2022-11-08",
             "links": {
                 "": "/exercises/ex09.html"
             }
