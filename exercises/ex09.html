@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/styles.css?v=1667246272.4600294">
+    <link rel="stylesheet" href="/static/styles.css?v=1667247902.0639656">
 </head>
 <body>
 
@@ -90,7 +90,7 @@
 <li><a href="#cellcontact_with"><code>Cell#contact_with</code></a></li>
 <li><a href="#modelcheck_contacts"><code>Model#check_contacts</code></a></li>
 </ul></li>
-<li><a href="#part-3-immunity---20pts">Part 3) Immunity - 20pts</a>
+<li><a href="#part-3-immunity---25pts">Part 3) Immunity - 25pts</a>
 <ul>
 <li><a href="#constants-1">Constants</a></li>
 <li><a href="#cellimmunize"><code>Cell#immunize</code></a></li>
@@ -170,7 +170,7 @@
 <p>Hint: you should loop based on <strong>indices</strong>. You will need to make use of nested loops to address this algorithmic challenge, as well. For full credit, your nested loops should not compute the distance between a pair of <code>Cell</code> objects twice (or with itself).</p>
 <p>You want to call this function <em>once</em> each time the <code>Model#tick</code> method is called. In <code>Model#tick</code>, after your for loop for calling the <code>Cell#tick</code> method on every <code>Cell</code> in the <code>population</code> completes, call the <code>Model#check_contacts</code> method. <strong>Be sure to unindent this call so that it is not inside of the for loop!</strong></p>
 <p><strong>Functionality checkpoint:</strong> Once you have this part working, you should be able to run your simulation and see vulnerable <code>Cell</code> objects become infected as they come into contact with infected cells. For debugging purposes, try slowing your <code>CELL_SPEED</code> down to <code>1.0</code> and your <code>CELL_COUNT</code> up to <code>50</code> to observe contacts more easily. Turn your speed back up to something more fun than <code>1.0</code> when complete.</p>
-<h2 id="part-3-immunity---20pts">Part 3) Immunity - 20pts</h2>
+<h2 id="part-3-immunity---25pts">Part 3) Immunity - 25pts</h2>
 <p>Now that you can simulate a <code>Cell</code> infecting another <code>Cell</code>, let’s simulate the concept of recovery and immunity. After a <code>Cell</code> is infected for some period of time, it will recover and become immune. The instructions in this part are intentionally more succinct than in the previous part as an exercise in translating requirements into code.</p>
 <h3 id="constants-1">Constants</h3>
 <ol type="1">
