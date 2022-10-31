@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EX08 - Simpy - COMP110 - 22F</title>
+    <title> EX09 - Cluster Funk - COMP110 - 22F</title>
     <link rel="icon" type="image/png" href="/static/tabbrand.png" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1660613425.1552572">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/styles.css?v=1667221099.5963356">
 </head>
 <body>
 
@@ -31,6 +30,9 @@
               <a class="nav-link " href="/">agenda</a>
             </li>
             <li class="nav-item">
+              <a href="/lessons-page" class="nav-link">lessons</a>
+            </li>
+            <li class="nav-item">
               <a href="/resources" class="nav-link">resources</a>
             </li>
             <li class="nav-item">
@@ -42,6 +44,9 @@
             <li class="nav-item">
               <a href="https://course.care/courses" class="nav-link">course.care</a>
             </li>
+            <li class="nav-item">
+                  <a href="/resources/team.html" class="nav-link">team110</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -49,77 +54,119 @@
   <div id="exercises-page" class="container">
     <div class="row pt-4">
         <div class="col-12">
-            <h2 >EX08 - Simpy</h2>
+            <h2 >EX09 - Cluster Funk</h2>
             <hr class="title"/>
         </div>
     </div>
 
-    <script src="/static/scripts/toggle-handler.js"></script>
-    
-    <div class="row px-4">
-        <div id="box" class="toc col-xl-3 col-lg-3 order-1 order-lg-2" role="doc-toc">
-            <div id="menu-overview" class="link-page box">
-                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
-                <div id="overview-links">
-                    <div id="TOC" role="doc-toc">
-                        <ul class="overview-item">doc-toc">
+    <div class="container">
+                <div class="content"><h2 id="overview">Overview</h2>
+<p>This exercise is inspired by the <a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">Washington Post’s article that simulated infectiousness</a> with 2D cells in a graphical visualization. Simulations such as this are great sandboxes to practice and learn object-oriented programming concepts such as classes, objects, constructors, and methods.</p>
+<h3 id="learning-objectives">Learning Objectives</h3>
 <ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#pull-the-skeleton-code">0. Pull the skeleton code</a></li>
-<li><a href="#starter-files">1. Starter Files</a></li>
-<li><a href="#autograding">Autograding</a></li>
+<li>Gain experience modelling concepts with object-oriented programming techniques</li>
+<li>Practice implementing methods and utilizing method calls</li>
+<li>Gain comfort modelling more complex data relationships through object graphs</li>
 </ul>
-</</ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h2 id="overview">Overview</h2>
-<p>In Exercise 09, you will write a utility class for working with a column of numerical values. This will give practice with constructors, methods, operator overloading and more. In the process, you will develop a keen understanding for the intuition and abstractions provided by a highly popular and valuable to understand library called <code>NumPy</code>. We will explore <em>NumPy</em> later in the course!</p>
-<p>In this exercise, you will build-up an abstraction, with many powerful capabilities, in the form of a class called <code>Simpy</code>.</p>
-<p>The lectures posted to the course site on 7/11 cover all the conceptual material needed to complete the exericse.</p>
-<p><strong>Due Tuesday 7/14 at 11:59pm - Start Early!</strong></p>
-<h2 id="pull-the-skeleton-code">0. Pull the skeleton code</h2>
-<p>You will find the starter files needed by “pulling” from the course workspace repository. Before beginning, be sure to:</p>
-<ol start="0" type="1">
-<li>Be sure you are in your course workspace. Open the file explorer and you should see your work for the course. If you do not, open your course workspace through File &gt; Open Recent.</li>
-<li>Open the <em>Source Control View</em> by clicking the 3-node (circles) graph (connected by lines) icon in your sidebar or opening the command palatte and searching for <em>Source Control</em>.</li>
-<li>Click the Ellipses in the Source Control pane and select “Pull” from the drop-down menu. This will begin the pulling process from the course repository. It should silently succeed.</li>
-<li>Return to the File Explorer pane and open the <code>exercises</code> directory. You should see it now contains another directory named <code>ex08</code>. If you expand that directory, you should see the starter file for the three functions you’ll be writing.</li>
-<li>If you do not see the <code>ex08</code> directory, try once more but selecting <code>"Pull From"</code> and select <code>upstream</code> in step 2. If you expand that directory, you will see the starter files: <code>Simpy.py</code> and <code>SimpyDemos.ipynb</code>.</li>
-</ol>
-<p>Assignment Outline</p>
-<ul>
-<li>Parts 0 through 5 – 30 Points Autograded</li>
-<li>Parts 6 through 10 – 50 Points Autograded</li>
-<li>Checks for Understanding #1 and # 2 – 10 Points Handgraded</li>
-<li>Style, Linting – 10 Points Autograded</li>
-</ul>
-<h2 id="starter-files">1. Starter Files</h2>
-<p>Your work in this exercise will be completed across two files:</p>
+<h3 id="getting-started">Getting Started</h3>
+<p>This exercise involves support code that was introduced in the lesson for Tuesday, November 1st. If you have not completed that lesson, please do so first before continuing on.</p>
+<p>As a reminder, to begin running your simulation you can run the following command in the terminal:</p>
+<p><code>python -m exercises.ex09</code></p>
+<h2 id="office-hours-expectations">Office Hours Expectations</h2>
+<p>As we round out the final weeks of the course, we expect you to come to office hours with a level of preparation that demonstrates effort.</p>
+<p><strong>You must be able to explain the code you have written.</strong> If you do not understand the code you have written, the TAs are instructed to help you understand that and then turn you free to try solving the next problem you are up against.</p>
+<h2 id="part-0-attribution-style-linting-and-types---10pts">Part 0) Attribution, Style Linting, and Types - 10pts</h2>
+<p>Be sure you fill in the global <code>__author__</code> variable of <code>model.py</code> with your PID.</p>
+<p>As is standard in COMP110, your exercise will be linted to follow standard Python style conventions for a part of your grade. Additionally, your program’s annotated types and value uses will be statically checked by <code>mypy</code>, so you should annotate all methods and constructors with the correct static types.</p>
+<h2 id="part-1-infection---30pts">Part 1) Infection - 30pts</h2>
+<p>Now that you have a simulation where <code>Cell</code> objects are moving around a 2D <code>Model</code> environment, model infectiousness of close contacts by making it possible for a <code>Cell</code> to contract disease and spread it to other <code>Cell</code> objects.</p>
+<p>In our modelling, we will choose to use the <code>sickness</code> attribute of a <code>Cell</code> to determine its <strong>state</strong> as either <code>VULNERABLE</code> or <code>INFECTED</code>. These two <strong>states</strong> will be <strong>represented</strong> as integers: <code>VULNERABLE</code> is <code>0</code> and <code>INFECTED</code> is <code>1</code>.</p>
+<h3 id="constants">Constants</h3>
+<p>In <code>exercises/ex09/constants.py</code> add two additional named constants: <code>VULNERABLE</code> and <code>INFECTED</code>. Establish their values as described above. In the <code>Cell</code>’s attribute definitions, replace <code>0</code> with a reference to <code>constants.VULNERABLE</code>.</p>
+<h3 id="cellcontract_disease"><code>Cell#contract_disease</code></h3>
+<p>Define a <em>method</em> of <code>Cell</code> named <code>contract_disease</code>. It should assign the <code>INFECTED</code> constant you defined above to the <code>sickness</code> attribute of the <code>Cell</code> object the method is called on. The method has no formal parameters and returns nothing.</p>
+<blockquote>
+<p><strong>Why define a method in this case?</strong></p>
+<p>For such a simple concept, why not just expect anyone <em>using</em> a <code>Cell</code> object to assign directly to the <code>sickness</code> attribute? Fantastic question! The motivation here is that by defining methods for modelling the “verbs” or actions of an object, we have more flexibility as the <em>designer</em> of a class to change our minds on how the data inside the class, specifically its defined attributes, are represented.</p>
+<p>This design principle is called <strong>encapsulation</strong> and is a bit beyond the scope of COMP110. We’ll continue practicing it in the next few method implementations that will feel <strong>very simple</strong>. The implication of defining such methods is that we expect any code outside of the <code>Cell</code> class to use is the methods and not the <code>sickness</code> attribute directly. In doing so, within the <code>Cell</code> class you could change your mind about how you <strong>represent</strong> <code>sickness</code>, such as by making it <code>bool</code>, or a <code>str</code>, or even another object, and any code outside of the <code>Cell</code> relying on the <strong>methods</strong> the <code>Cell</code> exposes would still work just fine!</p>
+</blockquote>
+<h3 id="cellis_vulnerable"><code>Cell#is_vulnerable</code></h3>
+<p>Define a <em>method</em> of a <code>Cell</code> named <code>is_vulnerable</code>. It should return <code>True</code> when the cell’s <code>sickness</code> attribute is equal to <code>VULNERABLE</code> and <code>False</code> otherwise. The method has no formal parameters.</p>
+<h3 id="cellis_infected"><code>Cell#is_infected</code></h3>
+<p>Define a <em>method</em> of a <code>Cell</code> named <code>is_infected</code>. It should return <code>True</code> when the cell’s <code>sickness</code> attribute is equal to <code>INFECTED</code> and <code>False</code> otherwise. The method has no formal parameters.</p>
+<h3 id="cellcolor"><code>Cell#color</code></h3>
+<p>The <code>ViewController</code> support code responsible for visualizing the state of your simulation will ask each cell for the color to fill it with via this method.</p>
+<p>To practice calling a method on <code>self</code>, be sure to implement this method <em>in terms of</em> <code>Cell#is_infected</code> and/or <code>Cell#is_vulnerable</code>. In other words: <strong>do not access the <code>attribute</code> directly from within the definition of this method</strong>.</p>
+<p>Define a <em>method</em> of a <code>Cell</code> named <code>color</code>. It should return <code>"gray"</code> if the <code>Cell</code> is vulnerable, and any other <a href="https://trinket.io/docs/colors">color string</a> of your choosing if the <code>Cell</code> is infected.</p>
+<h3 id="model__init__---number-of-infected-cells"><code>Model#__init__</code> - Number of Infected Cells</h3>
+<p>Now that a <code>Cell</code> can be modelled as infected, let’s be sure the simulation begins with some number of infected <code>Cell</code> objects. Simulating contagion <em>is</em> the purpose of this exercise, after all.</p>
+<p>Add a third, formal parameter to the <code>Model</code> constructor. This <code>int</code> parameter will establish the number of infected <code>Cell</code> objects a simulation begins with. If this parameter’s value is equal to or exceeds the value of the <code>cells</code> parameter, or is 0 or negative, raise a <code>ValueError</code> with a message that indicates some number of the <code>Cell</code> objects must begin infected.</p>
+<p>You will need to change the code in the constructor to infect the correct number of cells according to your new parameter. This parameter’s value <em>should not</em> increase the total number of cells in your simulation beyond the first parameter’s value.</p>
+<p>After modifying the constructor, you will need to update the <code>__main__.py</code>’s use of it to have the correct arguments. You should define a constant, of any name you’d like, to represent the number of infected cells to begin the simulation with.</p>
+<p><strong>Functionality checkpoint:</strong> When you begin your simulation, the number of cells you specified as infected should be visualized in the color you choose to represent infected cells with in <code>Cell#color</code>.</p>
+<h2 id="part-2-contagion---30-points">Part 2) Contagion - 30 points</h2>
+<p>Now that your simulation is modelling infected <code>Cell</code> objects in the <code>Model</code>’s population, it’s time to simulate what happens when two <code>Cell</code> objects come into contact with one another when one is infected and the other is vulnerable: disease contraction.</p>
+<p>Since your cells are modelled as simple circles with a radius defined in <code>constants.py</code>, we’ll define “contact” as meaning when the two cells touch. To know when two cells touch, it helps to know how far apart they are, so let’s begin with defining a helper method on the <code>Point</code> class that determines the distance between two points.</p>
+<h3 id="pointdistance"><code>Point#distance</code></h3>
+<p>Define a <code>distance</code> method on the <code>Point</code> class that returns the distance between the <code>Point</code> object the method was called on and some other <code>Point</code> object passed in as a parameter. You should use the formula for computing the distance between two points that involves summing the squared difference of each component and taking the square root. Feel free to Khan Academy the distance between two points formula if it’s been a second since you last had to compute this. To calculate a square root in Python, import the <code>sqrt</code> function from the <code>math</code> library.</p>
+<h3 id="cellcontact_with"><code>Cell#contact_with</code></h3>
+<p>Before you test every pair of <code>Cell</code>s for a contact, let’s go ahead and setup a method that will be called when two <code>Cell</code> objects do make contact.</p>
+<p>Define a method on the <code>Cell</code> class that can be given another <code>Cell</code> object as a parameter. If either of the <code>Cell</code> objects is infected and the other is vulnerable, then the other should become infected. You should implement this method in terms of the <code>Cell#is_vulnerable</code>, <code>Cell#is_infected</code>, and <code>Cell#contract_disease</code> methods defined above (in other words: do not directly access the <code>sickness</code> attribute from within <code>contact_with</code>, rely upon those methods instead). This method does not return any value.</p>
+<h3 id="modelcheck_contacts"><code>Model#check_contacts</code></h3>
+<p>Now it’s time to test whether any two <code>Cell</code> values come in “contact” with one another. This logic will be primarily defined inside of the <code>Model</code> class.</p>
+<p>Write a method named <code>check_contacts</code> in the <code>Model</code> class. It should return <code>None</code>. Its purpose is to compare the distance between every two <code>Cell</code> objects’ <code>location</code> attributes in the <code>population</code>. If any distance between two <code>Cell</code>s is less than the constant <code>CELL_RADIUS</code>, then call the <code>Cell#contact_with</code> method on <em>one</em> of the two <code>Cell</code> objects, giving a reference to the other as an argument.</p>
+<blockquote>
+<p>Before attempting to write code, try thinking through a similar problem. Imagine a sequence of playing cards lying face down. You can only check two at a time and you can’t use any memory to cleverly recall where you saw some other number. How would you turn over pairs at a time in an algorithmic fashion such that you could find all pairs of the same suit without checking the same two cards twice?</p>
+</blockquote>
+<p>Hint: you should loop based on <strong>indices</strong>. You will need to make use of nested loops to address this algorithmic challenge, as well. For full credit, your nested loops should not compute the distance between a pair of <code>Cell</code> objects twice (or with itself).</p>
+<p>You want to call this function <em>once</em> each time the <code>Model#tick</code> method is called. In <code>Model#tick</code>, after your for loop for calling the <code>Cell#tick</code> method on every <code>Cell</code> in the <code>population</code> completes, call the <code>Model#check_contacts</code> method. <strong>Be sure to unindent this call so that it is not inside of the for loop!</strong></p>
+<p><strong>Functionality checkpoint:</strong> Once you have this part working, you should be able to run your simulation and see vulnerable <code>Cell</code> objects become infected as they come into contact with infected cells. For debugging purposes, try slowing your <code>CELL_SPEED</code> down to <code>1.0</code> and your <code>CELL_COUNT</code> up to <code>50</code> to observe contacts more easily. Turn your speed back up to something more fun than <code>1.0</code> when complete.</p>
+<h2 id="part-3-immunity---20pts">Part 3) Immunity - 20pts</h2>
+<p>Now that you can simulate a <code>Cell</code> infecting another <code>Cell</code>, let’s simulate the concept of recovery and immunity. After a <code>Cell</code> is infected for some period of time, it will recover and become immune. The instructions in this part are intentionally more succinct than in the previous part as an exercise in translating requirements into code.</p>
+<h3 id="constants-1">Constants</h3>
 <ol type="1">
-<li><p><code>Simpy.py</code> - This is the Python module where your <code>Simpy</code> class is implemented.</p></li>
-<li><p><code>SimpyDemos.ipynb</code> - This is the Jupyter Notebook file that walks you through each of the methods of <code>Simpy</code> and provides sample uses. There are additionally a few <em>check for understanding</em> cells that will ask you to solve problems in terms of methods you previously implemented.</p></li>
+<li>Establish a constant in <code>constants.py</code> named <code>IMMUNE</code> that is assigned <code>-1</code>. We will use the value -1 in the <code>sickness</code> attribute to represent the state of an immune Cell.</li>
+<li>Establish a constant in <code>constants.py</code> named <code>RECOVERY_PERIOD</code> that will be assigned an <code>int</code> representing the number of ticks a <code>Cell</code> will be infected for before recovering. Each <code>tick</code> is approximately 1/30th of a second, so let’s simulate a <code>Cell</code> recovers after 3 seconds. For now, assign a value of <code>90</code> ticks to <code>RECOVERY_PERIOD</code>.</li>
 </ol>
-<p>The descriptions of the functions you will need to implement, as well as example code that makes use of those functions once they are correctly implemented, can be found in the <code>SimpyDemos.ipynb</code> file.</p>
-<p>If your screen is large enough, you are encouraged to open these files side-by-side in VSCode by dragging the tab of one to the right side of VSCode so that it changes to a split pane view. Closing your file explorer can help give you additional horizontal space.</p>
-<p><strong>Be sure to save your work in <code>Simpy.py</code> before reevaluating cells in <code>SimpyDemos.ipynb</code>. Sometimes the Jupyter Notebook can reach a bad state and the only way to fix is to close your <code>ipynb</code> tab and reopen a new one, thus restarting the kernel.</strong></p>
-<h2 id="autograding">Autograding</h2>
-<p>Save your <code>.ipynb</code> file before submission! You should have <em>Run All</em> cells to do so.</p>
-<p>Login to Gradescope and select the assignment named “EX09 - Simpy”. You’ll see an area to upload a zip file. To produce a zip file for autograding, return back to Visual Studio Code.</p>
-<p>If you <em>do not</em> see a Terminal at the bottom of your screen, open the Command Palette and search for “View: Toggle Integrated Terminal”.</p>
-<p>To produce a zip file for <code>ex08</code>, type the following command (all on a single line):</p>
-<p><code>python -m tools.submission exercises/ex08</code></p>
-<p>In the file explorer pane, look to find the zip file named “21.mm.dd-hh.mm-exercises-ex09.zip”. The “mm”, “dd”, and so on, are timestamps with the current month, day, hour, minute. If you right click on this file and select “Reveal in File Explorer” on Windows or “Reveal in Finder” on Mac, the zip file’s location on your computer will open. Upload this file to Gradescope to submit your work for this exercise.</p>
-<p>Autograding will take a few moments to complete. For this exercise there will be 15 points manually graded for the <code>Checks for Understanding</code> cells in the notebook being completed. If there are issues reported, you are encouraged to try and resolve them and resubmit. If for any reason you aren’t receiving full credit and aren’t sure what to try next, come give us a visit in office hours!</p>
+<h3 id="cellimmunize"><code>Cell#immunize</code></h3>
+<p>Add a method to <code>Cell</code> named <code>immunize</code> that assigns the constant <code>IMMUNE</code> to the <code>sickness</code> attribute of the Cell.</p>
+<h3 id="cellis_immune"><code>Cell#is_immune</code></h3>
+<p>Add a method to <code>Cell</code> named <code>is_immune</code> that returns <code>True</code> when the <code>Cell</code> object’s <code>sickness</code> attribute is equal to the <code>IMMUNE</code> constant.</p>
+<h3 id="cellcolor-1"><code>Cell#color</code></h3>
+<p>Modify your implementation of the <code>color</code> method to return a color of your choosing when the cell is immune. You should implement this method in terms of the <code>Cell#is_immune</code> method.</p>
+<h3 id="model__init__"><code>Model#__init__</code></h3>
+<p>Add a fourth parameter to <code>Model#__init__</code> that is the number of immune cells the simulation should begin with. Define this parameter as one which has a default value of <code>0</code>, thus making it an optional parameter. The syntax for a default parameter is <code>param_name: param_type = default_value</code></p>
+<p>Update your <code>main</code> function to begin the simulation with at least 1 immune cell. However many immune cells you begin your simulation with, define that as a constant like you did the number of infecteds. You should be able to run your program and see the immune cells show up. Note that this should not increase the total number of cells in your simulation beyond the number specified in the first parameter. Additionally, you will need to handle edge cases around the number of infected and immune cells such that it does not equal or exceed the total number of cells in the simulation. Raise a ValueError in the edge cases where there is an improper number of immune or infected cells in the call to model’s constructor.</p>
+<h3 id="celltick"><code>Cell#tick</code></h3>
+<p>Infected cells should become immune after <code>RECOVERY_PERIOD</code> ticks. To model this concept, use the <code>sickness</code> attribute of a <code>Cell</code> to count the number of ticks it has been infected for. Thus, in the <code>tick</code> method, if a <code>Cell</code> is infected, increase its <code>sickness</code> attribute by <code>1</code>. If a <code>Cell</code>’s <code>sickness</code> attribute is greater than <code>RECOVERY_PERIOD</code>, be sure the cell becomes immunized. You will need to update the logic of your <code>is_infected</code> method to return <code>True</code> for any <code>sickness</code> attribute value greater than or equal to <code>INFECTED</code>.</p>
+<p>When this is working you should see each infected Cell change to your immune color after ~3 seconds. Your immune cells should not become reinfected. If they do, be sure to fix this logic!</p>
+<h3 id="modelis_complete"><code>Model#is_complete</code></h3>
+<p>The state of the simulation is complete when there are no remaining infected cells. Implement the <code>Model#is_complete</code> method such that it will return <code>True</code> when all <code>Cell</code> objects in the population are either vulnerable or immune and <code>False</code> when any of the <code>Cell</code> objects are infected. The <code>ViewController</code> will stop animating the model when <code>is_complete</code> returns <code>True</code>.</p>
+<p>You should now be able to run a simulation through to completion! You are encouraged to experiment with some of the constants such that you get a feel for impacts of <em>speed</em>, <em>population density</em>, <em>percent immune</em>, and so on.</p>
+<h2 id="part-4-style-concerns---5pts">Part 4) Style Concerns - 5pts</h2>
+<ol type="1">
+<li>Your algorithm in the <code>check_contacts</code> method. You should be sure per given call to <code>check_contacts</code> you do not find the distance between the same pair of <code>Cell</code> objects twice and you do not find the distance between a cell and itself.</li>
+<li>Your <code>contact_with</code> method being defined in terms of other methods and not accessing the <code>sickness</code> attribute directly.</li>
+</ol>
+<h2 id="submission-instructions">Submission Instructions</h2>
+<p>To create a submission, run the submission script:</p>
+<p><code>python -m tools.submission exercises/ex09</code></p>
+<p>This will produce a zip file with all of your exercise’s directory’s files in it. Autograding will open shortly.</p>
+<h2 id="future-extensions">Future Extensions</h2>
+<p>After you submit a final version of your exercise to Gradescope for the courses’ purposes, you are encouraged to try modelling different ideas which interest you if you’d like an additional challenge. This is a great sandbox for practicing bringing little ideas to life. Here are a few:</p>
+<ol type="1">
+<li>Make an infection probabilistic</li>
+<li>Try and model shelter-in-place orders</li>
+<li>Make the cells “bounce” when they come in contact with each other</li>
+<li>Add another kind of object to the simulation (like a health clinic) that convey immunity when a cell comes in touch</li>
+<li>Model infected cells quarantining in place</li>
+<li>Look to the Washington Post article for more ideas!</li>
+</ol>
 </div>
-
-       
-
-    </div> 
+            </div>
 
     <div class="authors-box bg-light mt-4 py-3 ps-4">
-      <span> Contributor(s):              Kris Jordan, Kaki Ryan</span>
+      <span> Contributor(s): Kris Jordan</span>
     </div>       
   </div>
   <div class='link-page mt-3 container'>
