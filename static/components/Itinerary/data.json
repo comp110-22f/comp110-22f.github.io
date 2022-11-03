@@ -650,7 +650,8 @@
             "date": "2022-11-03",
             "deadline": "None",
             "links": {
-                "": "https://youtu.be/hz-aZiwt5MM"
+                "Stream / Recording": "https://youtu.be/hz-aZiwt5MM",
+                "Slides": "/static/slides/cl08-oop-practice.pdf"
             }
         }
     ],
