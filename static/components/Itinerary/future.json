@@ -1,55 +1,39 @@
 {
-    "2022-11-01": [
+    "2022-11-05": [],
+    "2022-11-06": [],
+    "2022-11-07": [],
+    "2022-11-08": [
         {
-            "kind": "CQ",
-            "n": 4,
-            "title": "Mutable vs. Immutable Methods",
-            "date": "2022-11-01",
-            "deadline": "2022-11-01",
+            "kind": "LS",
+            "n": 25,
+            "title": "Magic Methods",
+            "date": "2022-11-08",
+            "deadline": "2022-11-08",
             "links": {
-                "": "https://youtu.be/sCpf9VFyb1c"
+                "": "https://www.youtube.com/watch?v=yxDIEqm_K6c"
             }
         },
         {
             "kind": "LS",
-            "n": 24,
-            "title": "Intro to Contagion Simulation",
-            "date": "2022-11-01",
-            "deadline": "2022-11-01",
+            "n": 26,
+            "title": "Operator Overloads",
+            "date": "2022-11-08",
+            "deadline": "2022-11-08",
             "links": {
-                "": "https://youtu.be/hTU2Fr58RO0"
+                "": "https://www.youtube.com/watch?v=JJLnGL-cShU"
             }
         },
         {
-            "kind": "EX",
-            "n": 9,
-            "title": "Contagion Simulation (Due Tuesday 11/8)",
-            "date": "2022-11-01",
+            "kind": "LS",
+            "n": 27,
+            "title": "Default Parameters and Union Types",
+            "date": "2022-11-08",
             "deadline": "2022-11-08",
             "links": {
-                "": "/exercises/ex09.html"
+                "": "https://www.youtube.com/watch?v=7cOEibFopjQ"
             }
         }
     ],
-    "2022-11-02": [],
-    "2022-11-03": [
-        {
-            "kind": "CL",
-            "n": 8,
-            "title": "More Practice with OOP",
-            "date": "2022-11-03",
-            "deadline": "None",
-            "links": {
-                "Stream / Recording": "https://youtu.be/hz-aZiwt5MM",
-                "Slides": "/static/slides/cl08-oop-practice.pdf"
-            }
-        }
-    ],
-    "2022-11-04": [],
-    "2022-11-05": [],
-    "2022-11-06": [],
-    "2022-11-07": [],
-    "2022-11-08": [],
     "2022-11-09": [],
     "2022-11-10": [],
     "2022-11-11": [],
