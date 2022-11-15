@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1668550484.0413015">
+  <link rel="stylesheet" href="/static/styles.css?v=1668550483.074977">
 </head>
 
 <body>
@@ -120,12 +120,12 @@ minor changes/additions
     The constructor should initialize the `plots` attribute to an empty `list`, and then append `initial_planting` trees of size 1.  After that, the constructor should fill the rest of the plots with zeroes to indicate that they are empty!
     c. The class should define a method called `plant`.  This method should take an argument of type `int`, representing the plot index at which a tree should be planted. The tree should be size 1 when planted.  If this method is called on a plot that already has a tree, the old tree will be uprooted and replaced with a new baby tree (size 1).
     d. The class should define a method called `growth`.  This method should increase the size of each planted tree by 1. Remember that unplanted plots are represented by a 0 in the `plots` list.
-    e. The class should define a method called `harvest`.  This method should take an argument called `replant` of type `bool` that will determine whether this method replants trees (sets them to size 1 after harvest) or leaves the plots empty (sets them to size 0 after harvest). For our method, trees that are at least size 5 will be harvested. The method will return the count of how many trees were successfully harvested (type `int`).  
+    e. The class should define a method called `harvest`.  This method should take an argument called `replant` of type `bool` that will determine whether this method replants trees (sets them to size 1 after harvest) or leaves the plots empty (sets them to size 0 after harvest). For our method, trees that are at least size 5 will be harvested. The method will return the count of how many trees were successfully harvested (type `int`).
     f. The class should overload the addition operator.  This method should be pure and work between two objects of type `ChristmasTreeFarm`.  The method should return a new `ChristmasTreeFarm` object whose size is the sum of the given `ChristmasTreeFarm`s, and whose initial plantings are the sum of the number of planted trees in the given `ChristmasTreeFarm`s. -->
 <!-- ## Function Writing
 
-17A. Write a function called `find_courses`. Given the following `Course` class definition, `find_courses` should take in a `list[Courses]` and a `str` prerequisite to search for. The function should return a list of the `names` of each Course whose `level` is 400+ and whose `prerequisites` list contains the given string.  
-![](/static/practice_worksheets/fa21/qz04-question14.png)  
+17A. Write a function called `find_courses`. Given the following `Course` class definition, `find_courses` should take in a `list[Courses]` and a `str` prerequisite to search for. The function should return a list of the `names` of each Course whose `level` is 400+ and whose `prerequisites` list contains the given string.
+![](/static/practice_worksheets/fa21/qz04-question14.png)
 
 17B. Write a method called `is_valid_course` for the `Course` class. The method should take in a `str` prerequisite and return a `bool` that represents whether the course’s `level` is 400+ and if its `prerequisites` list contains the given string. -->
 <h1 id="solutions">Solutions</h1>

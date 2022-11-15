@@ -1,62 +1,4 @@
 {
-    "2022-11-08": [
-        {
-            "kind": "LS",
-            "n": 25,
-            "title": "Magic Methods",
-            "date": "2022-11-08",
-            "deadline": "2022-11-08",
-            "links": {
-                "": "https://www.youtube.com/watch?v=yxDIEqm_K6c"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 26,
-            "title": "Operator Overloads",
-            "date": "2022-11-08",
-            "deadline": "2022-11-08",
-            "links": {
-                "": "https://www.youtube.com/watch?v=JJLnGL-cShU"
-            }
-        },
-        {
-            "kind": "LS",
-            "n": 27,
-            "title": "Default Parameters and Union Types",
-            "date": "2022-11-08",
-            "deadline": "2022-11-08",
-            "links": {
-                "": "https://www.youtube.com/watch?v=7cOEibFopjQ"
-            }
-        }
-    ],
-    "2022-11-09": [],
-    "2022-11-10": [
-        {
-            "kind": "CL",
-            "n": 9,
-            "title": "Tracing and Writing Magic Methods / Vectorization",
-            "date": "2022-11-10",
-            "deadline": "None",
-            "links": {
-                "Stream / Recording": "https://youtu.be/mRatHebAB9A",
-                "Slides": "/static/slides/cl09-magic-methods.pdf"
-            }
-        },
-        {
-            "kind": "EX",
-            "n": 10,
-            "title": "Simpy (Due Wednesday 11/16)",
-            "date": "2022-11-10",
-            "deadline": "2022-11-16",
-            "links": {
-                "": "/exercises/ex10.html"
-            }
-        }
-    ],
-    "2022-11-11": [],
-    "2022-11-12": [],
     "2022-11-13": [],
     "2022-11-14": [],
     "2022-11-15": [
@@ -79,7 +21,9 @@
             "title": "Quiz 3",
             "date": "2022-11-17",
             "deadline": "2022-11-17",
-            "links": {}
+            "links": {
+                "Practice Problems": "/resources/practice/fa22/quiz3-worksheet.html"
+            }
         }
     ],
     "2022-11-18": [],

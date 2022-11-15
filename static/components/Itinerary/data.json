@@ -739,7 +739,9 @@
             "title": "Quiz 3",
             "date": "2022-11-17",
             "deadline": "2022-11-17",
-            "links": {}
+            "links": {
+                "Practice Problems": "/resources/practice/fa22/quiz3-worksheet.html"
+            }
         }
     ],
     "2022-11-18": [],
