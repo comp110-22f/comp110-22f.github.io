@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/static/styles.css?v=1669062598.9625983">
+  <link rel="stylesheet" href="/static/styles.css?v=1669127549.2533689">
 </head>
 
 <body>
@@ -56,8 +56,37 @@
       </div>
     </div>
 
-    <div class="container">
-                <div class="content"><h2 id="overview">Overview</h2>
+    <script src="/static/scripts/toggle-handler.js"></script>
+    
+    <div class="row px-4">
+        <div id="box" class="toc col-xl-3 col-lg-3 order-1 order-lg-2" role="doc-toc">
+            <div id="menu-overview" class="link-page box">
+                <button id="overview-button" class="btn btn-ov" onclick="hideshow()">Overview  <img id="button-img" class="filter-icon" src="/static/components/Itinerary/arrow-up.svg" style="height:15px; padding-left: 4px;"></button>
+                <div id="overview-links">
+                    <div id="TOC" role="doc-toc">
+                        <ul class="overview-item"><ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#linked_list.py"><code>linked_list.py</code></a></li>
+<li><a href="#linked_list_test.py"><code>linked_list_test.py</code></a></li>
+</ul></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#last-15-points"><code>last</code> – 15 points</a></li>
+<li><a href="#value_at-15-points"><code>value_at</code> – 15 points</a></li>
+<li><a href="#max-15-points"><code>max</code> – 15 points</a></li>
+<li><a href="#linkify-20-points"><code>linkify</code> – 20 points</a></li>
+<li><a href="#scale-20-points"><code>scale</code> – 20 points</a></li>
+<li><a href="#linting-and-type-correctness---15-points">Linting and Type Correctness - 15 Points</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#hand-in-will-open-soon">Hand-in Will Open Soon</a></li>
+</ul>
+</</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="content col-xl-9 col-lg-9 order-2 order-lg-1 pt-3"><h2 id="overview">Overview</h2>
 <p>In these exercises you will implement a few algorithms to process a singly-linked list data structure. Just like in the <code>list</code> utility functions, these functions will be <em>pure</em> and are well suited for writing test cases. As such, you will also write test cases demonstrating their usage and verifying their correctness.</p>
 <h2 id="setup">Setup</h2>
 <p>In the <code>exercises</code> directory, create a directory named <code>ex11</code>.</p>
@@ -210,7 +239,10 @@ ValueError: Cannot call max with None.</code></pre>
 <p>When you are ready to submit for grading, close out any open Python Debug Console terminals using the Trash Can and then open up a clean, new terminal.</p>
 <p><code>python -m tools.submission exercises/ex11</code></p>
 </div>
-            </div>
+
+       
+
+    </div> 
 
     <div class="authors-box bg-light mt-4 py-3 ps-4">
       <span> Contributor(s):        Kris Jordan, Kaki Ryan</span>
