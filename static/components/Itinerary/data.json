@@ -806,7 +806,8 @@
             "date": "2022-11-29",
             "deadline": "None",
             "links": {
-                "": "https://youtu.be/5Kf3hkh_33Q"
+                "Slides": "/static/slides/cl10-ldoc.pdf",
+                "Recording": "https://youtu.be/5Kf3hkh_33Q"
             }
         }
     ],

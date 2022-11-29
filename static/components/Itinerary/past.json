@@ -745,5 +745,55 @@
             }
         }
     ],
-    "2022-11-18": []
+    "2022-11-18": [],
+    "2022-11-19": [],
+    "2022-11-20": [],
+    "2022-11-21": [],
+    "2022-11-22": [
+        {
+            "kind": "CQ",
+            "n": 5,
+            "title": "Recursion Diagram #1 (Due Monday 11/28)",
+            "date": "2022-11-22",
+            "deadline": "2022-11-28",
+            "links": {
+                "": "https://www.youtube.com/watch?v=tn5d3SxWWxc"
+            }
+        },
+        {
+            "kind": "CQ",
+            "n": 6,
+            "title": "Recursion Diagram #2 (Due Monday 11/28)",
+            "date": "2022-11-22",
+            "deadline": "2022-11-28",
+            "links": {
+                "": "https://www.youtube.com/watch?v=qqJKcmPbgCY"
+            }
+        },
+        {
+            "kind": "CQ",
+            "n": 7,
+            "title": "Recursion Diagram #3 (Due Monday 11/28)",
+            "date": "2022-11-22",
+            "deadline": "2022-11-28",
+            "links": {
+                "": "https://www.youtube.com/watch?v=SDZRv01oyVk"
+            }
+        },
+        {
+            "kind": "EX",
+            "n": 11,
+            "title": "Linked List Utils (Due Wednesday 11/30)",
+            "date": "2022-11-22",
+            "deadline": "2022-11-30",
+            "links": {
+                "Write-up": "/exercises/ex11.html",
+                "This exercise is effectively optional due to revised syllabus now dropping lowest EX score. This EX is highly encouraged for students continuing to COMP210.": ""
+            }
+        }
+    ],
+    "2022-11-23": [],
+    "2022-11-24": [],
+    "2022-11-25": [],
+    "2022-11-26": []
 }
