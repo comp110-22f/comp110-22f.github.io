@@ -787,8 +787,7 @@
             "date": "2022-11-22",
             "deadline": "2022-11-30",
             "links": {
-                "Write-up": "/exercises/ex11.html",
-                "This exercise is effectively optional due to revised syllabus now dropping lowest EX score. This EX is highly encouraged for students continuing to COMP210.": ""
+                "": "/exercises/ex11.html"
             }
         }
     ],
@@ -819,7 +818,9 @@
             "title": "Final @ 12:00PM",
             "date": "2022-12-02",
             "deadline": "None",
-            "links": {}
+            "links": {
+                "Practice Problems": "/resources/practice/fa22/final-worksheet.html"
+            }
         }
     ]
 }

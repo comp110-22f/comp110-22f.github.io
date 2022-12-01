@@ -1,6 +1,4 @@
 {
-    "2022-11-27": [],
-    "2022-11-28": [],
     "2022-11-29": [
         {
             "kind": "CL",
@@ -22,7 +20,9 @@
             "title": "Final @ 12:00PM",
             "date": "2022-12-02",
             "deadline": "None",
-            "links": {}
+            "links": {
+                "Practice Problems": "/resources/practice/fa22/final-worksheet.html"
+            }
         }
     ]
 }
